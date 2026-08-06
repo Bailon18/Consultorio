@@ -4,7 +4,7 @@
  */
 window.CV_CONFIG = {
   /** Solo dígitos con código de país */
-  whatsappNumber: "51987654321",
+  whatsappNumber: "51902220134",
 
   email: "contacto@carmenvalenzuela.pe",
   domain: "www.carmenvalenzuela.pe",
