@@ -16,6 +16,7 @@ window.CV_CONFIG = {
   price: "Desde S/ 180 (referencial)",
   instagram: "https://instagram.com/carmenvalenzuela.psi",
   facebook: "https://facebook.com/carmenvalenzuela.psi",
+  linkedin: "https://www.linkedin.com/in/carmenvalenzuela",
 
   gtmId: "",
   ga4Id: "",

@@ -1,22 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ============================================================
    Carmen Valenzuela — Diseño editorial premium
    Elegante + cálido · Impacto visual · Psicología
    ============================================================ */
 
 :root {
-  --bone: #f8f4ee;
-  --cream: #fff9f2;
-  --sand: #e7dccb;
-  --sage: #4f6b5c;
-  --sage-deep: #2c4036;
-  --sage-mist: #c9d9cf;
-  --clay: #c56a4a;
-  --clay-soft: #f0d5c8;
+  /* Paleta marca Carmen */
+  --bone: #f6f2ea; /* Marfil fondo */
+  --cream: #fbf8f2;
+  --sand: #ebe3d6;
+  --sage: #3d5f57; /* Verde bosque medio */
+  --sage-deep: #2f4b45; /* Verde bosque principal */
+  --sage-mist: #d5e0dc;
+  --clay: #c77758; /* Terracota acento */
+  --clay-soft: #efd2c4;
   --ink: #1c1a17;
   --mute: #5f5b55;
-  --line: rgba(44, 64, 54, 0.14);
+  --line: rgba(47, 75, 69, 0.14);
   --white: #ffffff;
-  --glow: rgba(79, 107, 92, 0.18);
+  --glow: rgba(47, 75, 69, 0.18);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Outfit", system-ui, sans-serif;
@@ -404,7 +409,7 @@ a:hover {
 }
 
 .btn--clay {
-  background: linear-gradient(135deg, #b85a3c, var(--clay));
+  background: linear-gradient(135deg, #b86a4a, var(--clay));
   color: #fff;
   box-shadow: 0 14px 30px rgba(197, 106, 74, 0.32);
 }
@@ -934,6 +939,53 @@ a:hover {
   border-bottom-color: var(--sage);
 }
 
+.map-slot--contact {
+  margin-top: 1.5rem;
+}
+
+.social-label {
+  margin: 1.25rem 0 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.social-links__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.7rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--sage-deep);
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 0.9rem;
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.social-links__item svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.social-links__item:hover {
+  background: var(--sage-mist);
+  border-color: color-mix(in srgb, var(--sage) 40%, transparent);
+  color: var(--sage-deep);
+  transform: translateY(-1px);
+}
+
 @media (min-width: 768px) {
   .map-slot iframe {
     height: 16rem;
@@ -1189,40 +1241,152 @@ a:hover {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: #1a2721;
-  color: color-mix(in srgb, var(--cream) 88%, transparent);
-  padding-block: 3.5rem 1.75rem;
+  background:
+    radial-gradient(80% 60% at 100% 0%, rgba(197, 106, 74, 0.12), transparent 50%),
+    linear-gradient(160deg, #2f4b45 0%, #243832 55%, #1c2c28 100%);
+  color: color-mix(in srgb, var(--cream) 90%, transparent);
+  padding-block: 3.75rem 1.75rem;
 }
 
 .site-footer a {
   color: var(--cream);
-}
-
-.site-footer a:hover {
-  color: var(--clay-soft);
+  text-decoration: none;
 }
 
 .footer-grid {
   display: grid;
-  gap: 2rem;
+  gap: 2.25rem;
 }
 
 @media (min-width: 760px) {
   .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.35fr 1.15fr 1fr;
+    align-items: start;
   }
 }
 
 .footer-brand {
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  margin: 0 0 0.25rem;
+  font-size: clamp(1.55rem, 3vw, 1.85rem);
+  margin: 0 0 0.3rem;
   color: var(--cream);
+  letter-spacing: -0.02em;
 }
 
 .footer-role {
   margin: 0 0 0.85rem;
-  opacity: 0.75;
+  opacity: 0.78;
+  font-size: 0.95rem;
+}
+
+.footer-meta {
+  margin: 0.2rem 0;
+  font-size: 0.92rem;
+  opacity: 0.78;
+}
+
+.footer-cta {
+  margin-top: 1.25rem;
+}
+
+.footer-heading {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage-mist);
+  font-weight: 650;
+}
+
+.footer-contacts {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.footer-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.2s var(--ease);
+}
+
+.footer-chip:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(240, 213, 200, 0.35);
+  color: var(--cream);
+  transform: translateY(-1px);
+}
+
+.footer-chip__icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
+  background: rgba(201, 217, 207, 0.14);
+  color: var(--sage-mist);
+  flex-shrink: 0;
+}
+
+.footer-chip__icon svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.footer-chip__text {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.footer-chip__text small {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.footer-chip__text strong {
+  font-size: 0.92rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.footer-social {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.footer-social__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 2.85rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 650;
+  font-size: 0.92rem;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.2s var(--ease);
+}
+
+.footer-social__btn svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  opacity: 0.95;
+}
+
+.footer-social__btn:hover {
+  background: rgba(197, 106, 74, 0.22);
+  border-color: rgba(240, 213, 200, 0.4);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .footer-list {
@@ -1233,17 +1397,8 @@ a:hover {
   gap: 0.45rem;
 }
 
-.footer-list h3 {
-  margin: 0 0 0.45rem;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sage-mist);
-}
-
 .footer-bottom {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   padding-top: 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
@@ -1251,13 +1406,23 @@ a:hover {
   gap: 0.75rem 1.25rem;
   justify-content: space-between;
   font-size: 0.85rem;
-  opacity: 0.8;
+  opacity: 0.78;
 }
 
 .footer-legal {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 1rem;
+}
+
+.footer-legal a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 0.05rem;
+}
+
+.footer-legal a:hover {
+  border-bottom-color: var(--clay-soft);
+  color: var(--clay-soft);
 }
 
 /* ---------- WhatsApp float ---------- */

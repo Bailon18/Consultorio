@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Psicóloga en San Isidro | Carmen Valenzuela — Psicoterapia para adultos",
+  description = "Psicoterapia para adultos en San Isidro, Lima. Acompañamiento profesional, cercano y confidencial. Atención presencial y virtual. Reserva tu cita por WhatsApp.",
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  name: "Carmen Valenzuela",
+  description: "Psicóloga y psicoterapeuta. Psicoterapia para adultos en San Isidro, Lima.",
+  url: "https://www.carmenvalenzuela.pe/",
+  image: "https://www.carmenvalenzuela.pe/images/carmen-valenzuela.jpg",
+  telephone: "+51902220134",
+  email: "contacto@carmenvalenzuela.pe",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Av. Javier Prado Oeste 1680, Of. 502",
+    addressLocality: "San Isidro",
+    addressRegion: "Lima",
+    addressCountry: "PE",
+  },
+  areaServed: ["San Isidro", "Miraflores", "Surco", "La Molina", "Lima"],
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.carmenvalenzuela.pe/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="Carmen Valenzuela | Psicóloga y psicoterapeuta en San Isidro" />
+    <meta property="og:description" content="Un espacio seguro para comprender lo que sientes y avanzar con mayor claridad." />
+    <meta property="og:url" content="https://www.carmenvalenzuela.pe/" />
+    <meta property="og:image" content="/images/carmen-valenzuela.jpg" />
+    <meta name="theme-color" content="#2F4B45" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body class="font-body text-ink bg-bone antialiased">
+    <slot />
+    <script src="/js/config.js" is:inline></script>
+    <script src="/js/i18n.js" is:inline></script>
+    <script src="/js/main.js" is:inline></script>
+  </body>
+</html>

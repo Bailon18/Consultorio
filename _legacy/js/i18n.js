@@ -57,11 +57,14 @@ window.CV_I18N = {
     meta_approach_text:
       "Psicoterapia orientada a comprender emociones, patrones y vínculos que influyen en el presente.",
     services_eyebrow: "Servicios",
-    services_title: "Motivos frecuentes de consulta",
+    services_title: "Psicoterapia, evaluaciones y acompañamiento",
     services_lead:
-      "Cada proceso es único. Estos son algunos de los motivos con los que trabajo con mayor frecuencia. La propuesta se personaliza según tu situación.",
+      "Cada proceso es único. Estos son los servicios principales y algunos motivos frecuentes de consulta. Talleres y capacitaciones se incorporarán más adelante.",
     svc1_t: "Psicoterapia individual para adultos",
     svc1_d: "Un espacio regular para pensar, sentir y elaborar lo que atraviesas, con acompañamiento profesional.",
+    svc_eval_t: "Evaluaciones psicológicas",
+    svc_eval_d:
+      "Orientación y evaluación profesional según tu necesidad, con un proceso claro, ético y confidencial.",
     svc2_t: "Acompañamiento en procesos de duelo",
     svc2_d: "Apoyo para atravesar pérdidas y cambios significativos, respetando tu ritmo y tu manera de sentir.",
     svc3_t: "Ansiedad, estrés y sobrecarga emocional",
@@ -201,6 +204,7 @@ window.CV_I18N = {
     wa_default:
       "Hola, Carmen. Encontré tu página web y quisiera recibir información para reservar una consulta psicológica.",
     wa_svc1: "Hola, Carmen. Me interesa información sobre psicoterapia individual para adultos.",
+    wa_svc_eval: "Hola, Carmen. Me interesa información sobre evaluaciones psicológicas.",
     wa_svc2: "Hola, Carmen. Quisiera información sobre acompañamiento en procesos de duelo.",
     wa_svc3: "Hola, Carmen. Me gustaría consultar por ansiedad, estrés o sobrecarga emocional.",
     wa_svc4: "Hola, Carmen. Quisiera orientación sobre dificultades en relaciones personales.",
@@ -267,11 +271,14 @@ window.CV_I18N = {
     meta_approach_text:
       "Psychotherapy oriented toward understanding emotions, patterns and relationships that influence the present.",
     services_eyebrow: "Services",
-    services_title: "Common reasons for seeking therapy",
+    services_title: "Psychotherapy, assessments and support",
     services_lead:
-      "Every process is unique. These are some of the concerns I most often work with. Care is always tailored to your situation.",
+      "Every process is unique. These are the main services and common reasons for consultation. Workshops and training will be added later.",
     svc1_t: "Individual psychotherapy for adults",
     svc1_d: "A regular space to think, feel and work through what you are facing, with professional support.",
+    svc_eval_t: "Psychological assessments",
+    svc_eval_d:
+      "Professional guidance and assessment according to your needs, with a clear, ethical and confidential process.",
     svc2_t: "Support through grief",
     svc2_d: "Care for navigating loss and meaningful change, respecting your pace and way of feeling.",
     svc3_t: "Anxiety, stress and emotional overload",
@@ -408,6 +415,7 @@ window.CV_I18N = {
     wa_default:
       "Hello, Carmen. I found your website and would like information to book a psychological consultation.",
     wa_svc1: "Hello, Carmen. I am interested in information about individual psychotherapy for adults.",
+    wa_svc_eval: "Hello, Carmen. I am interested in information about psychological assessments.",
     wa_svc2: "Hello, Carmen. I would like information about support through grief.",
     wa_svc3: "Hello, Carmen. I would like to ask about anxiety, stress or emotional overload.",
     wa_svc4: "Hello, Carmen. I would like guidance on difficulties in personal relationships.",
