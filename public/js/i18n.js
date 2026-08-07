@@ -59,12 +59,24 @@ window.CV_I18N = {
     services_eyebrow: "Servicios",
     services_title: "Psicoterapia, evaluaciones y acompañamiento",
     services_lead:
-      "Cada proceso es único. Estos son los servicios principales y algunos motivos frecuentes de consulta. Talleres y capacitaciones se incorporarán más adelante.",
+      "Dos vías de atención profesional, y un acompañamiento que se adapta a lo que estás atravesando.",
+    svc1_tag: "Servicio principal",
     svc1_t: "Psicoterapia individual para adultos",
-    svc1_d: "Un espacio regular para pensar, sentir y elaborar lo que atraviesas, con acompañamiento profesional.",
+    svc1_d:
+      "Un espacio regular para pensar, sentir y elaborar lo que atraviesas, con acompañamiento profesional, cercano y confidencial.",
+    svc1_p1: "Sesiones con cita previa",
+    svc1_p2: "Presencial o virtual",
+    svc1_p3: "Proceso personalizado",
+    svc_eval_tag: "Servicio principal",
     svc_eval_t: "Evaluaciones psicológicas",
     svc_eval_d:
       "Orientación y evaluación profesional según tu necesidad, con un proceso claro, ético y confidencial.",
+    svc_eval_p1: "Enfoque ético y claro",
+    svc_eval_p2: "Según tu necesidad",
+    svc_eval_p3: "Confidencialidad garantizada",
+    motives_eyebrow: "Motivos frecuentes de consulta",
+    motives_lead:
+      "No necesitas tenerlo todo claro para escribir. Estos son algunos de los temas con los que trabajo.",
     svc2_t: "Acompañamiento en procesos de duelo",
     svc2_d: "Apoyo para atravesar pérdidas y cambios significativos, respetando tu ritmo y tu manera de sentir.",
     svc3_t: "Ansiedad, estrés y sobrecarga emocional",
@@ -77,8 +89,7 @@ window.CV_I18N = {
     svc6_d: "Sostén profesional en etapas de transición, incertidumbre o redefinición personal.",
     svc7_t: "Autoconocimiento y crecimiento personal",
     svc7_d: "Un proceso para conocerte con mayor profundidad y cuidar tu bienestar emocional de forma sostenida.",
-    services_note:
-      "Nota: los servicios deben personalizarse y validarse con la psicóloga antes de publicar la página definitiva.",
+    services_note: "",
     approach_eyebrow: "Enfoque terapéutico",
     approach_title: "Comprender para habitar el presente con más claridad",
     approach_lead:
@@ -202,19 +213,45 @@ window.CV_I18N = {
     wa_float: "WhatsApp",
     wa_float_aria: "Reservar una cita por WhatsApp",
     wa_default:
-      "Hola, Carmen. Encontré tu página web y quisiera recibir información para reservar una consulta psicológica.",
-    wa_svc1: "Hola, Carmen. Me interesa información sobre psicoterapia individual para adultos.",
-    wa_svc_eval: "Hola, Carmen. Me interesa información sobre evaluaciones psicológicas.",
-    wa_svc2: "Hola, Carmen. Quisiera información sobre acompañamiento en procesos de duelo.",
-    wa_svc3: "Hola, Carmen. Me gustaría consultar por ansiedad, estrés o sobrecarga emocional.",
-    wa_svc4: "Hola, Carmen. Quisiera orientación sobre dificultades en relaciones personales.",
+      "👋 Hola, Carmen.\n\nEncontré tu página web y me gustaría *reservar una consulta psicológica*.\n\n📍 Preferencia: presencial (San Isidro) o virtual\n🗓️ ¿Podrías indicarme disponibilidad y el siguiente paso?\n\nGracias.",
+    wa_header:
+      "👋 Hola, Carmen.\n\nVi tu web y quiero *reservar una cita*.\n\n📍 San Isidro (presencial) o virtual\n🗓️ ¿Qué disponibilidad tienes?\n\nGracias.",
+    wa_hero:
+      "👋 Hola, Carmen.\n\nLlegué desde el inicio de tu web y me gustaría *agendar una consulta*.\n\n✨ Busco un espacio seguro para conversar\n📍 Modalidad: presencial o virtual\n\n¿Cuál sería el siguiente paso?\n\nGracias.",
+    wa_menu:
+      "👋 Hola, Carmen.\n\nTe escribo desde el menú de tu web para *reservar una cita*.\n\n¿Me compartes disponibilidad, por favor?\n\nGracias.",
+    wa_motivos:
+      "👋 Hola, Carmen.\n\nRevisé los *motivos frecuentes de consulta* en tu web y me gustaría *reservar una cita*.\n\n📝 Puedo contarte más detalles cuando conversemos.\n🗓️ ¿Tienes disponibilidad?\n\nGracias.",
+    wa_proceso:
+      "👋 Hola, Carmen.\n\nVi la sección de *cómo reservar una cita* y quiero empezar el proceso.\n\n1️⃣ Me comunico por aquí\n2️⃣ Consultar horarios\n3️⃣ Confirmar sesión\n\n¿Podemos coordinar?\n\nGracias.",
+    wa_final:
+      "👋 Hola, Carmen.\n\nQuiero *dar el primer paso* y reservar una consulta por WhatsApp.\n\n📍 Preferencia: presencial (San Isidro) o virtual\n🗓️ ¿Me indicas disponibilidad?\n\nGracias.",
+    wa_contact:
+      "👋 Hola, Carmen.\n\nTe escribo desde la sección de *contacto* de tu web.\n\nMe gustaría recibir información para una *consulta psicológica*.\n¿Cuál es el siguiente paso para agendar?\n\nGracias.",
+    wa_footer:
+      "👋 Hola, Carmen.\n\nTe contacto desde el *footer* de tu web para *reservar una cita*.\n\n¿Podrías indicarme disponibilidad?\n\nGracias.",
+    wa_float_msg:
+      "👋 Hola, Carmen.\n\nTe escribo por el botón de WhatsApp de tu web.\n\n💚 Me gustaría *reservar una consulta*\n📍 Presencial (San Isidro) o virtual\n\n¿Qué horarios tienes disponibles?\n\nGracias.",
+    wa_svc1:
+      "👋 Hola, Carmen.\n\nMe interesa información sobre:\n🧠 *Psicoterapia individual para adultos*\n\n¿Podrías contarme disponibilidad, modalidad y cómo agendar?\n\nGracias.",
+    wa_svc_eval:
+      "👋 Hola, Carmen.\n\nMe interesa información sobre:\n📋 *Evaluaciones psicológicas*\n\n¿Podrías orientarme sobre el proceso, tiempos y cómo coordinar?\n\nGracias.",
+    wa_svc2:
+      "👋 Hola, Carmen.\n\nQuisiera información sobre:\n🤍 *Acompañamiento en procesos de duelo*\n\n¿Podríamos conversar sobre una primera consulta?\n\nGracias.",
+    wa_svc3:
+      "👋 Hola, Carmen.\n\nMe gustaría consultar por:\n🌿 *Ansiedad, estrés o sobrecarga emocional*\n\n¿Tienes disponibilidad para una sesión?\n\nGracias.",
+    wa_svc4:
+      "👋 Hola, Carmen.\n\nQuisiera orientación sobre:\n💬 *Dificultades en relaciones personales*\n\n¿Podrías indicarme cómo agendar una consulta?\n\nGracias.",
     wa_svc5:
-      "Hola, Carmen. Me interesa trabajar conflictos emocionales relacionados con experiencias del pasado.",
+      "👋 Hola, Carmen.\n\nMe interesa trabajar:\n🕰️ *Experiencias del pasado* y su impacto en el presente\n\n¿Podríamos coordinar una primera sesión?\n\nGracias.",
     wa_svc6:
-      "Hola, Carmen. Estoy atravesando un cambio importante y quisiera información sobre una consulta.",
-    wa_svc7: "Hola, Carmen. Me interesa información sobre autoconocimiento y crecimiento personal.",
+      "👋 Hola, Carmen.\n\nEstoy atravesando un *cambio importante / crisis personal* 🔄\n\nQuisiera información para una consulta.\n¿Cuál sería el siguiente paso?\n\nGracias.",
+    wa_svc7:
+      "👋 Hola, Carmen.\n\nMe interesa:\n✨ *Autoconocimiento y crecimiento personal*\n\n¿Podrías compartirme disponibilidad para iniciar?\n\nGracias.",
     wa_avail:
-      "Hola, Carmen. Quisiera consultar disponibilidad para una sesión presencial en San Isidro.",
+      "👋 Hola, Carmen.\n\nQuisiera consultar *disponibilidad* para una sesión.\n📍 Preferencia: presencial en San Isidro\n\n¿Qué horarios tienes esta semana?\n\nGracias.",
+    wa_virtual:
+      "👋 Hola, Carmen.\n\nMe interesa la *atención virtual / psicoterapia online*.\n\n💻 Sesiones por videollamada\n🗓️ ¿Qué disponibilidad tienes?\n\nGracias.",
   },
   en: {
     meta_title: "Psychologist in San Isidro | Carmen Valenzuela — Psychotherapy for adults",
@@ -273,12 +310,24 @@ window.CV_I18N = {
     services_eyebrow: "Services",
     services_title: "Psychotherapy, assessments and support",
     services_lead:
-      "Every process is unique. These are the main services and common reasons for consultation. Workshops and training will be added later.",
+      "Two pathways of professional care, and support that adapts to what you are going through.",
+    svc1_tag: "Core service",
     svc1_t: "Individual psychotherapy for adults",
-    svc1_d: "A regular space to think, feel and work through what you are facing, with professional support.",
+    svc1_d:
+      "A regular space to think, feel and work through what you are facing, with professional, close and confidential support.",
+    svc1_p1: "Sessions by appointment",
+    svc1_p2: "In person or online",
+    svc1_p3: "Personalized process",
+    svc_eval_tag: "Core service",
     svc_eval_t: "Psychological assessments",
     svc_eval_d:
       "Professional guidance and assessment according to your needs, with a clear, ethical and confidential process.",
+    svc_eval_p1: "Ethical and clear approach",
+    svc_eval_p2: "According to your needs",
+    svc_eval_p3: "Confidentiality protected",
+    motives_eyebrow: "Common reasons for consultation",
+    motives_lead:
+      "You do not need to have everything figured out to write. These are some of the themes I work with.",
     svc2_t: "Support through grief",
     svc2_d: "Care for navigating loss and meaningful change, respecting your pace and way of feeling.",
     svc3_t: "Anxiety, stress and emotional overload",
@@ -291,8 +340,7 @@ window.CV_I18N = {
     svc6_d: "Professional support during transition, uncertainty or personal redefinition.",
     svc7_t: "Self-knowledge and personal growth",
     svc7_d: "A process to know yourself more deeply and care for your emotional wellbeing over time.",
-    services_note:
-      "Note: services should be personalized and validated with the psychologist before the final launch.",
+    services_note: "",
     approach_eyebrow: "Therapeutic approach",
     approach_title: "Understanding, so you can inhabit the present with more clarity",
     approach_lead:
@@ -413,18 +461,44 @@ window.CV_I18N = {
     wa_float: "WhatsApp",
     wa_float_aria: "Book a session on WhatsApp",
     wa_default:
-      "Hello, Carmen. I found your website and would like information to book a psychological consultation.",
-    wa_svc1: "Hello, Carmen. I am interested in information about individual psychotherapy for adults.",
-    wa_svc_eval: "Hello, Carmen. I am interested in information about psychological assessments.",
-    wa_svc2: "Hello, Carmen. I would like information about support through grief.",
-    wa_svc3: "Hello, Carmen. I would like to ask about anxiety, stress or emotional overload.",
-    wa_svc4: "Hello, Carmen. I would like guidance on difficulties in personal relationships.",
+      "👋 Hello, Carmen.\n\nI found your website and would like to *book a psychological consultation*.\n\n📍 Preference: in person (San Isidro) or online\n🗓️ Could you share availability and the next step?\n\nThank you.",
+    wa_header:
+      "👋 Hello, Carmen.\n\nI saw your website and want to *book an appointment*.\n\n📍 San Isidro (in person) or online\n🗓️ What availability do you have?\n\nThank you.",
+    wa_hero:
+      "👋 Hello, Carmen.\n\nI came from the top of your website and would like to *schedule a consultation*.\n\n✨ I am looking for a safe space to talk\n📍 Modality: in person or online\n\nWhat would be the next step?\n\nThank you.",
+    wa_menu:
+      "👋 Hello, Carmen.\n\nI am writing from your website menu to *book an appointment*.\n\nCould you share availability, please?\n\nThank you.",
+    wa_motivos:
+      "👋 Hello, Carmen.\n\nI reviewed the *common reasons for consultation* on your site and would like to *book an appointment*.\n\n📝 I can share more details when we talk.\n🗓️ Do you have availability?\n\nThank you.",
+    wa_proceso:
+      "👋 Hello, Carmen.\n\nI saw the *how to book* section and want to start the process.\n\n1️⃣ I am writing here\n2️⃣ Check schedules\n3️⃣ Confirm the session\n\nCan we coordinate?\n\nThank you.",
+    wa_final:
+      "👋 Hello, Carmen.\n\nI want to *take the first step* and book a consultation on WhatsApp.\n\n📍 Preference: in person (San Isidro) or online\n🗓️ Could you share availability?\n\nThank you.",
+    wa_contact:
+      "👋 Hello, Carmen.\n\nI am writing from the *contact* section of your website.\n\nI would like information for a *psychological consultation*.\nWhat is the next step to book?\n\nThank you.",
+    wa_footer:
+      "👋 Hello, Carmen.\n\nI am contacting you from the *footer* of your website to *book an appointment*.\n\nCould you share availability?\n\nThank you.",
+    wa_float_msg:
+      "👋 Hello, Carmen.\n\nI am writing via the WhatsApp button on your website.\n\n💚 I would like to *book a consultation*\n📍 In person (San Isidro) or online\n\nWhat times do you have available?\n\nThank you.",
+    wa_svc1:
+      "👋 Hello, Carmen.\n\nI am interested in:\n🧠 *Individual psychotherapy for adults*\n\nCould you share availability, modality and how to book?\n\nThank you.",
+    wa_svc_eval:
+      "👋 Hello, Carmen.\n\nI am interested in:\n📋 *Psychological assessments*\n\nCould you guide me on the process, timing and how to schedule?\n\nThank you.",
+    wa_svc2:
+      "👋 Hello, Carmen.\n\nI would like information about:\n🤍 *Support through grief*\n\nCould we talk about a first session?\n\nThank you.",
+    wa_svc3:
+      "👋 Hello, Carmen.\n\nI would like to ask about:\n🌿 *Anxiety, stress or emotional overload*\n\nDo you have availability for a session?\n\nThank you.",
+    wa_svc4:
+      "👋 Hello, Carmen.\n\nI would like guidance on:\n💬 *Difficulties in personal relationships*\n\nCould you tell me how to book a consultation?\n\nThank you.",
     wa_svc5:
-      "Hello, Carmen. I am interested in working on emotional conflicts related to past experiences.",
+      "👋 Hello, Carmen.\n\nI am interested in working on:\n🕰️ *Past experiences* and their impact today\n\nCould we schedule a first session?\n\nThank you.",
     wa_svc6:
-      "Hello, Carmen. I am going through an important change and would like information about a consultation.",
-    wa_svc7: "Hello, Carmen. I am interested in information about self-knowledge and personal growth.",
+      "👋 Hello, Carmen.\n\nI am going through an *important change / personal crisis* 🔄\n\nI would like information about a consultation.\nWhat would be the next step?\n\nThank you.",
+    wa_svc7:
+      "👋 Hello, Carmen.\n\nI am interested in:\n✨ *Self-knowledge and personal growth*\n\nCould you share availability to get started?\n\nThank you.",
     wa_avail:
-      "Hello, Carmen. I would like to check availability for an in-person session in San Isidro.",
+      "👋 Hello, Carmen.\n\nI would like to check *availability* for a session.\n📍 Preference: in person in San Isidro\n\nWhat times do you have this week?\n\nThank you.",
+    wa_virtual:
+      "👋 Hello, Carmen.\n\nI am interested in *online care / virtual psychotherapy*.\n\n💻 Video sessions\n🗓️ What availability do you have?\n\nThank you.",
   },
 };

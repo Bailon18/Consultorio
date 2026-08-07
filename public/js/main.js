@@ -117,6 +117,22 @@
     });
   }
 
+  /* ---------- Anclas del menú (Inicio siempre vuelve arriba) ---------- */
+  document.querySelectorAll('a[href="#inicio"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var target = document.getElementById("inicio");
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (history.replaceState) {
+        history.replaceState(null, "", "#inicio");
+      } else {
+        location.hash = "inicio";
+      }
+      if (toggle && drawer) setMenu(false);
+    });
+  });
+
   /* ---------- Tracking ---------- */
   window.dataLayer = window.dataLayer || [];
   function trackEvent(name, params) {

@@ -6,7 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
 
-  <header class="site-header" id="inicio">
+  <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="#inicio">
         <span class="brand__name">Carmen Valenzuela</span>
@@ -28,10 +28,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
 
-        <a class="btn btn--clay header-cta js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_default" data-event="cta_header">Reservar una cita</a>
+        <a class="btn btn--clay header-cta js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_header" data-event="cta_header">Reservar una cita</a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" data-i18n-aria="menu_open" aria-label="Abrir menú">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
       </div>
     </div>
@@ -45,34 +45,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="#modalidad" data-i18n="nav_modality">Modalidad</a>
         <a href="#faq" data-i18n="nav_faq">Preguntas</a>
         <a href="#contacto" data-i18n="nav_contact">Contacto</a>
-        <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_default" data-event="cta_menu_mobile">Reservar una cita</a>
+        <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_menu" data-event="cta_menu_mobile">Reservar una cita</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
-    <section class="hero" aria-labelledby="hero-brand">
+    <section class="hero" id="inicio" aria-labelledby="hero-brand">
       <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
       <div class="hero__grid">
-        <div class="reveal">
-          <p class="hero__kicker"><i aria-hidden="true"></i> <span data-i18n="hero_kicker">Psicoterapia para adultos</span></p>
-          <p class="hero__brand" id="hero-brand">Carmen Valenzuela</p>
-          <p class="hero__role" data-i18n="brand_role">Psicóloga y psicoterapeuta</p>
-          <h1 class="hero__title" data-i18n="hero_title">Un espacio seguro para comprender lo que sientes y avanzar con mayor claridad.</h1>
-          <p class="hero__text" data-i18n="hero_text">Psicoterapia para adultos en San Isidro. Acompañamiento profesional, cercano y confidencial para afrontar procesos emocionales, duelos, dificultades personales y experiencias del pasado.</p>
-          <div class="btn-group">
-            <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_default" data-event="cta_hero_primary">Reservar una cita</a>
+        <div class="hero-copy">
+          <p class="hero__kicker hero-in"><i aria-hidden="true"></i> <span data-i18n="hero_kicker">Psicoterapia para adultos</span></p>
+          <p class="hero__brand hero-in" id="hero-brand">Carmen Valenzuela</p>
+          <p class="hero__role hero-in" data-i18n="brand_role">Psicóloga y psicoterapeuta</p>
+          <h1 class="hero__title hero-in" data-i18n="hero_title">Un espacio seguro para comprender lo que sientes y avanzar con mayor claridad.</h1>
+          <p class="hero__text hero-in" data-i18n="hero_text">Psicoterapia para adultos en San Isidro. Acompañamiento profesional, cercano y confidencial para afrontar procesos emocionales, duelos, dificultades personales y experiencias del pasado.</p>
+          <div class="btn-group hero-in">
+            <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_hero" data-event="cta_hero_primary">Reservar una cita</a>
             <a class="btn btn--ghost" href="#enfoque" data-i18n="cta_approach">Conocer el enfoque terapéutico</a>
           </div>
-          <ul class="trust-row">
+          <ul class="trust-row hero-in">
             <li data-i18n="trust_1">Atención presencial y virtual</li>
             <li data-i18n="trust_2">Sesiones con cita previa</li>
             <li data-i18n="trust_3">Atención confidencial</li>
             <li data-i18n="trust_4">Terapia para adultos</li>
           </ul>
         </div>
-        <div class="hero__portrait reveal">
+        <div class="hero__portrait hero-in hero-in--photo">
           <img src="/images/carmen-valenzuela.jpg" alt="Carmen Valenzuela, psicóloga y psicoterapeuta" width="900" height="1125" decoding="async" fetchpriority="high" />
           <div class="hero__badge">
             <strong data-i18n="hero_badge_title">Presencial y virtual</strong>
@@ -112,60 +112,115 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <section class="section section--soft" id="servicios">
       <div class="container">
-        <p class="section__eyebrow" data-i18n="services_eyebrow">Servicios</p>
-        <h2 class="section__title" data-i18n="services_title">Psicoterapia, evaluaciones y acompañamiento</h2>
-        <p class="section__lead" data-i18n="services_lead">Cada proceso es único. Estos son los servicios principales y algunos motivos frecuentes de consulta. Talleres y capacitaciones se incorporarán más adelante.</p>
-        <div class="services-grid">
-          <article class="service-card service-card--wide reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.8-3.2 4.2-4.8 7-4.8S17.2 15.8 19 19"/></svg></div>
+        <header class="services-intro reveal">
+          <p class="section__eyebrow" data-i18n="services_eyebrow">Servicios</p>
+          <h2 class="section__title" data-i18n="services_title">Psicoterapia, evaluaciones y acompañamiento</h2>
+          <p class="section__lead" data-i18n="services_lead">Dos vías de atención profesional, y un acompañamiento que se adapta a lo que estás atravesando.</p>
+        </header>
+
+        <div class="offers">
+          <article class="offer reveal">
+            <div class="offer__top">
+              <span class="offer__index" aria-hidden="true">01</span>
+              <span class="offer__tag" data-i18n="svc1_tag">Servicio principal</span>
+            </div>
             <h3 data-i18n="svc1_t">Psicoterapia individual para adultos</h3>
-            <p data-i18n="svc1_d">Un espacio regular para pensar, sentir y elaborar lo que atraviesas, con acompañamiento profesional.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc1" data-event="cta_servicio_individual">Consultar por WhatsApp</a>
+            <p data-i18n="svc1_d">Un espacio regular para pensar, sentir y elaborar lo que atraviesas, con acompañamiento profesional, cercano y confidencial.</p>
+            <ul class="offer__points">
+              <li data-i18n="svc1_p1">Sesiones con cita previa</li>
+              <li data-i18n="svc1_p2">Presencial o virtual</li>
+              <li data-i18n="svc1_p3">Proceso personalizado</li>
+            </ul>
+            <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc1" data-event="cta_servicio_individual">Consultar por WhatsApp</a>
           </article>
-          <article class="service-card service-card--wide reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8v3H8z"/><path d="M6 7h12v13H6z"/><path d="M9 11h6M9 14h6M9 17h4"/></svg></div>
+
+          <article class="offer offer--alt reveal">
+            <div class="offer__top">
+              <span class="offer__index" aria-hidden="true">02</span>
+              <span class="offer__tag" data-i18n="svc_eval_tag">Servicio principal</span>
+            </div>
             <h3 data-i18n="svc_eval_t">Evaluaciones psicológicas</h3>
             <p data-i18n="svc_eval_d">Orientación y evaluación profesional según tu necesidad, con un proceso claro, ético y confidencial.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc_eval" data-event="cta_servicio_evaluaciones">Consultar por WhatsApp</a>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div>
-            <h3 data-i18n="svc2_t">Acompañamiento en procesos de duelo</h3>
-            <p data-i18n="svc2_d">Apoyo para atravesar pérdidas y cambios significativos, respetando tu ritmo y tu manera de sentir.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc2" data-event="cta_servicio_duelo">Consultar por WhatsApp</a>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14c2-1 4-1.5 8-1.5s6 .5 8 1.5"/><path d="M8 9.5c.8-1.5 2-2.5 4-2.5s3.2 1 4 2.5"/></svg></div>
-            <h3 data-i18n="svc3_t">Ansiedad, estrés y sobrecarga emocional</h3>
-            <p data-i18n="svc3_d">Trabajo para comprender lo que tensiona tu día a día y encontrar mayor estabilidad emocional.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc3" data-event="cta_servicio_ansiedad">Consultar por WhatsApp</a>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8.5" cy="10" r="2.5"/><circle cx="15.5" cy="10" r="2.5"/><path d="M4.5 18c1.2-2.2 2.8-3.3 4-3.3s2.8 1.1 4 3.3"/></svg></div>
-            <h3 data-i18n="svc4_t">Dificultades en las relaciones personales</h3>
-            <p data-i18n="svc4_d">Exploración de vínculos, límites y patrones que se repiten en la vida afectiva y cotidiana.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc4" data-event="cta_servicio_relaciones">Consultar por WhatsApp</a>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V7.5A2.5 2.5 0 0 1 7.5 5H19"/><path d="M9 19V10h10v9"/></svg></div>
-            <h3 data-i18n="svc5_t">Experiencias del pasado</h3>
-            <p data-i18n="svc5_d">Acompañamiento para comprender cómo lo vivido sigue influyendo en tu presente y en tus decisiones.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc5" data-event="cta_servicio_pasado">Consultar por WhatsApp</a>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M7 9l5-5 5 5"/></svg></div>
-            <h3 data-i18n="svc6_t">Cambios importantes y crisis personales</h3>
-            <p data-i18n="svc6_d">Sostén profesional en etapas de transición, incertidumbre o redefinición personal.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc6" data-event="cta_servicio_cambios">Consultar por WhatsApp</a>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 9.5v3l2 1.5"/></svg></div>
-            <h3 data-i18n="svc7_t">Autoconocimiento y crecimiento personal</h3>
-            <p data-i18n="svc7_d">Un proceso para conocerte con mayor profundidad y cuidar tu bienestar emocional de forma sostenida.</p>
-            <a class="link-wa js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc7" data-event="cta_servicio_crecimiento">Consultar por WhatsApp</a>
+            <ul class="offer__points">
+              <li data-i18n="svc_eval_p1">Enfoque ético y claro</li>
+              <li data-i18n="svc_eval_p2">Según tu necesidad</li>
+              <li data-i18n="svc_eval_p3">Confidencialidad garantizada</li>
+            </ul>
+            <a class="btn btn--ghost js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc_eval" data-event="cta_servicio_evaluaciones">Consultar por WhatsApp</a>
           </article>
         </div>
-        <p class="note" data-i18n="services_note">Nota: los servicios deben personalizarse y validarse con la psicóloga antes de publicar la página definitiva.</p>
+
+        <div class="motives reveal">
+          <div class="motives__head">
+            <p class="motives__eyebrow" data-i18n="motives_eyebrow">Motivos frecuentes de consulta</p>
+            <p class="motives__lead" data-i18n="motives_lead">No necesitas tenerlo todo claro para escribir. Estos son algunos de los temas con los que trabajo.</p>
+          </div>
+          <ul class="motives__list">
+            <li>
+              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc2" data-event="cta_motivo_duelo">
+                <span class="motives__num" aria-hidden="true">01</span>
+                <div>
+                  <strong data-i18n="svc2_t">Acompañamiento en procesos de duelo</strong>
+                  <p data-i18n="svc2_d">Apoyo para atravesar pérdidas y cambios significativos, respetando tu ritmo y tu manera de sentir.</p>
+                  <span class="motives__action"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc3" data-event="cta_motivo_ansiedad">
+                <span class="motives__num" aria-hidden="true">02</span>
+                <div>
+                  <strong data-i18n="svc3_t">Ansiedad, estrés y sobrecarga emocional</strong>
+                  <p data-i18n="svc3_d">Trabajo para comprender lo que tensiona tu día a día y encontrar mayor estabilidad emocional.</p>
+                  <span class="motives__action"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc4" data-event="cta_motivo_relaciones">
+                <span class="motives__num" aria-hidden="true">03</span>
+                <div>
+                  <strong data-i18n="svc4_t">Dificultades en las relaciones personales</strong>
+                  <p data-i18n="svc4_d">Exploración de vínculos, límites y patrones que se repiten en la vida afectiva y cotidiana.</p>
+                  <span class="motives__action"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc5" data-event="cta_motivo_pasado">
+                <span class="motives__num" aria-hidden="true">04</span>
+                <div>
+                  <strong data-i18n="svc5_t">Experiencias del pasado</strong>
+                  <p data-i18n="svc5_d">Acompañamiento para comprender cómo lo vivido sigue influyendo en tu presente y en tus decisiones.</p>
+                  <span class="motives__action"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc6" data-event="cta_motivo_cambios">
+                <span class="motives__num" aria-hidden="true">05</span>
+                <div>
+                  <strong data-i18n="svc6_t">Cambios importantes y crisis personales</strong>
+                  <p data-i18n="svc6_d">Sostén profesional en etapas de transición, incertidumbre o redefinición personal.</p>
+                  <span class="motives__action"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc7" data-event="cta_motivo_crecimiento">
+                <span class="motives__num" aria-hidden="true">06</span>
+                <div>
+                  <strong data-i18n="svc7_t">Autoconocimiento y crecimiento personal</strong>
+                  <p data-i18n="svc7_d">Un proceso para conocerte con mayor profundidad y cuidar tu bienestar emocional de forma sostenida.</p>
+                  <span class="motives__action"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="motives__cta">
+            <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book_wa" data-i18n-wa="wa_motivos" data-event="cta_servicios_motivos">Reservar una cita por WhatsApp</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -236,6 +291,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <li data-i18n="modality_virt_li2">Misma confidencialidad y cuidado profesional</li>
               <li data-i18n="modality_virt_li3">Ideal si trabajas o vives en zonas aledañas o fuera de Lima</li>
             </ul>
+            <p style="margin-top:1.1rem">
+              <a class="btn btn--wa js-whatsapp" href="#" data-i18n-wa="wa_virtual" data-event="cta_virtual"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_write_wa">Escribir por WhatsApp</span></a>
+            </p>
           </div>
         </div>
       </div>
@@ -252,7 +310,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <article class="step reveal"><h3 data-i18n="step3_t">Confirma tu sesión</h3><p data-i18n="step3_d">Coordinamos los detalles necesarios y confirmamos tu cita con claridad.</p></article>
         </div>
         <div class="btn-group" style="margin-top:2rem">
-          <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_default" data-event="cta_proceso">Reservar una cita</a>
+          <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_proceso" data-event="cta_proceso">Reservar una cita</a>
         </div>
       </div>
     </section>
@@ -293,7 +351,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2 class="section__title" data-i18n="cta_final_title">Dar el primer paso puede ser difícil</h2>
         <p class="section__lead" data-i18n="cta_final_lead">Podemos conversar para encontrar una modalidad de atención adecuada para ti.</p>
         <div class="btn-group">
-          <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book_wa" data-i18n-wa="wa_default" data-event="cta_final">Reservar una cita por WhatsApp</a>
+          <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book_wa" data-i18n-wa="wa_final" data-event="cta_final">Reservar una cita por WhatsApp</a>
         </div>
       </div>
     </section>
@@ -305,27 +363,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="section__title" data-i18n="contact_title">Escribe o deja tus datos</h2>
           <p class="section__lead" data-i18n="contact_lead">Prefieres WhatsApp o un mensaje breve. Solo pedimos información básica de contacto; no detalles clínicos.</p>
           <ul class="footer-list" style="color:var(--mute)">
-            <li><strong data-i18n="label_whatsapp">WhatsApp:</strong> <a class="js-whatsapp" href="#" data-i18n-wa="wa_default">+51 902 220 134</a></li>
+            <li><strong data-i18n="label_whatsapp">WhatsApp:</strong> <a class="js-whatsapp" href="#" data-i18n-wa="wa_contact" data-event="cta_contacto_numero">+51 902 220 134</a></li>
             <li><strong data-i18n="label_email">Correo:</strong> <a href="mailto:contacto@carmenvalenzuela.pe">contacto@carmenvalenzuela.pe</a></li>
             <li><strong data-i18n="label_location">Ubicación:</strong> <span data-i18n="location_value">San Isidro, Lima, Perú</span></li>
           </ul>
           <p class="social-label" data-i18n="footer_social">Redes</p>
           <div class="social-links" aria-label="Redes sociales">
             <a class="social-links__item" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3zm0 1.7A2.8 2.8 0 0 0 4.7 7.5v9a2.8 2.8 0 0 0 2.8 2.8h9a2.8 2.8 0 0 0 2.8-2.8v-9a2.8 2.8 0 0 0-2.8-2.8h-9zm9.7 1.3a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 8.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.7A2.1 2.1 0 1 0 14.1 12 2.1 2.1 0 0 0 12 9.9z"/></svg>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               Instagram
             </a>
             <a class="social-links__item" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h2.2l.8-3H14V9z"/></svg>
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
               Facebook
             </a>
             <a class="social-links__item" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.2 9.2H3.6V20h2.6V9.2zM4.9 4A1.5 1.5 0 1 0 4.9 7a1.5 1.5 0 0 0 0-3zM20.4 13.3c0-3-1.6-4.4-3.8-4.4a3.3 3.3 0 0 0-3 1.6V9.2h-2.6c0 1.7 0 10.8 0 10.8h2.6v-6c0-.3 0-.6.1-.9a2.1 2.1 0 0 1 2-1.4c1.4 0 2 1.1 2 2.7V20h2.6v-6.7z"/></svg>
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               LinkedIn
             </a>
           </div>
           <p style="margin-top:1.25rem">
-            <a class="btn btn--wa js-whatsapp" href="#" data-i18n="cta_write_wa" data-i18n-wa="wa_default" data-event="cta_contacto">Escribir por WhatsApp</a>
+            <a class="btn btn--wa js-whatsapp" href="#" data-i18n-wa="wa_contact" data-event="cta_contacto"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="cta_write_wa">Escribir por WhatsApp</span></a>
           </p>
           <div class="map-slot map-slot--contact">
             <iframe
@@ -403,15 +461,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="footer-role" data-i18n="brand_role">Psicóloga y psicoterapeuta</p>
         <p class="footer-meta"><span data-i18n="meta_license">Colegiatura</span>: <span data-i18n="data_license">C.Ps.P. 28417</span></p>
         <p class="footer-meta" data-i18n="location_value">San Isidro, Lima, Perú</p>
-        <a class="btn btn--clay footer-cta js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_default" data-event="cta_footer">Reservar una cita</a>
+        <a class="btn btn--clay footer-cta js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_footer" data-event="cta_footer">Reservar una cita</a>
       </div>
 
       <div>
         <h3 class="footer-heading" data-i18n="footer_contact">Contacto</h3>
         <div class="footer-contacts">
-          <a class="footer-chip js-whatsapp" href="#" data-i18n-wa="wa_default" data-event="cta_footer_wa">
+          <a class="footer-chip js-whatsapp" href="#" data-i18n-wa="wa_footer" data-event="cta_footer_wa">
             <span class="footer-chip__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 11.6c0 4.7-3.9 8.5-8.6 8.5a8.7 8.7 0 0 1-4.1-1l-4.6 1.2 1.3-4.4a8.4 8.4 0 0 1-1.2-4.3c0-4.7 3.9-8.5 8.6-8.5s8.6 3.8 8.6 8.5zm-8.6-7c-3.9 0-7 3.1-7 6.9 0 1.5.5 2.9 1.3 4.1l-.8 2.9 3-1a6.9 6.9 0 0 0 3.5 1c3.9 0 7-3.1 7-6.9s-3.1-7-7-7z"/></svg>
+              <i class="fa-brands fa-whatsapp"></i>
             </span>
             <span class="footer-chip__text">
               <small>WhatsApp</small>
@@ -420,7 +478,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </a>
           <a class="footer-chip" href="mailto:contacto@carmenvalenzuela.pe">
             <span class="footer-chip__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+              <i class="fa-solid fa-envelope"></i>
             </span>
             <span class="footer-chip__text">
               <small data-i18n="label_email">Correo</small>
@@ -434,15 +492,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h3 class="footer-heading" data-i18n="footer_social">Redes</h3>
         <div class="footer-social">
           <a class="footer-social__btn" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3zm0 1.7A2.8 2.8 0 0 0 4.7 7.5v9a2.8 2.8 0 0 0 2.8 2.8h9a2.8 2.8 0 0 0 2.8-2.8v-9a2.8 2.8 0 0 0-2.8-2.8h-9zm9.7 1.3a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 8.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.7A2.1 2.1 0 1 0 14.1 12 2.1 2.1 0 0 0 12 9.9z"/></svg>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             <span>Instagram</span>
           </a>
           <a class="footer-social__btn" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h2.2l.8-3H14V9z"/></svg>
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
             <span>Facebook</span>
           </a>
           <a class="footer-social__btn" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.2 9.2H3.6V20h2.6V9.2zM4.9 4A1.5 1.5 0 1 0 4.9 7a1.5 1.5 0 0 0 0-3zM20.4 13.3c0-3-1.6-4.4-3.8-4.4a3.3 3.3 0 0 0-3 1.6V9.2h-2.6c0 1.7 0 10.8 0 10.8h2.6v-6c0-.3 0-.6.1-.9a2.1 2.1 0 0 1 2-1.4c1.4 0 2 1.1 2 2.7V20h2.6v-6.7z"/></svg>
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             <span>LinkedIn</span>
           </a>
         </div>
@@ -457,8 +515,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </footer>
 
-  <a class="wa-float js-whatsapp" href="#" data-i18n-aria="wa_float_aria" aria-label="Reservar una cita por WhatsApp" data-i18n-wa="wa_default" data-event="cta_float">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6c0 4.7-3.9 8.5-8.6 8.5a8.7 8.7 0 0 1-4.1-1l-4.6 1.2 1.3-4.4a8.4 8.4 0 0 1-1.2-4.3c0-4.7 3.9-8.5 8.6-8.5s8.6 3.8 8.6 8.5zm-8.6-7c-3.9 0-7 3.1-7 6.9 0 1.5.5 2.9 1.3 4.1l-.8 2.9 3-1a6.9 6.9 0 0 0 3.5 1c3.9 0 7-3.1 7-6.9s-3.1-7-7-7zm4 9.1c-.1-.2-.6-.4-1-.5s-.6-.1-.9.3c-.2.4-.9 1.1-1.1 1.2s-.4.2-.7 0a5.6 5.6 0 0 1-2.8-2.4c-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5l-.5-1.1c-.1-.3-.3-.3-.5-.3h-.4c-.2 0-.5.1-.7.4s-1 1-1 2.3 1 2.7 1.2 2.9 2 3.2 5 4.4c.7.3 1.2.4 1.7.5.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.4-.3z"/></svg>
+  <a class="wa-float js-whatsapp" href="#" data-i18n-aria="wa_float_aria" aria-label="Reservar una cita por WhatsApp" data-i18n-wa="wa_float_msg" data-event="cta_float">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     <span class="wa-float__label" data-i18n="wa_float">WhatsApp</span>
   </a>
 
