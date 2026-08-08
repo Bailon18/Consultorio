@@ -171,6 +171,63 @@
     });
   }
 
+  /* ---------- Botón volver arriba ---------- */
+  (function toTop() {
+    var btn = document.getElementById("to-top");
+    if (!btn) return;
+
+    function onScroll() {
+      btn.classList.toggle("is-visible", window.pageYOffset > 500);
+    }
+
+    btn.addEventListener("click", function () {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
+
+  /* ---------- Widget WhatsApp (panel al hacer clic) ---------- */
+  (function waWidget() {
+    var widget = document.getElementById("wa-widget");
+    var toggle = document.getElementById("wa-toggle");
+    var closeBtn = document.getElementById("wa-close");
+    if (!widget || !toggle) return;
+
+    function setOpen(open) {
+      widget.classList.toggle("is-open", open);
+      document.body.classList.toggle("wa-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      var panel = document.getElementById("wa-panel");
+      if (panel) panel.setAttribute("aria-hidden", open ? "false" : "true");
+      if (open) {
+        trackEvent("whatsapp_open_panel", { event_category: "engagement", language: currentLang });
+      }
+    }
+
+    toggle.addEventListener("click", function () {
+      setOpen(!widget.classList.contains("is-open"));
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        setOpen(false);
+      });
+    }
+
+    document.addEventListener("click", function (e) {
+      if (widget.classList.contains("is-open") && !widget.contains(e.target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+  })();
+
   /* ---------- Formulario ---------- */
   var form = document.getElementById("contact-form");
   var success = document.getElementById("form-success");
