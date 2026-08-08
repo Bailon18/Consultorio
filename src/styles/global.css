@@ -311,9 +311,15 @@ a:hover {
   border-radius: 0.9rem;
   border: 1px solid var(--line);
   background: var(--white);
+  color: var(--sage-deep);
   cursor: pointer;
   display: grid;
   place-items: center;
+}
+
+.nav-toggle svg {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 @media (max-width: 979.98px) {
@@ -630,6 +636,11 @@ a:hover {
   );
   filter: blur(6px);
   pointer-events: none;
+}
+
+.hero__portrait picture,
+.about__photo picture {
+  display: contents;
 }
 
 .hero__portrait img {
@@ -1742,6 +1753,15 @@ a:hover {
 }
 
 /* ---------- WhatsApp float ---------- */
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+
 .wa-widget {
   position: fixed;
   right: 1rem;
