@@ -8,18 +8,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="#inicio">
-        <span class="brand__name">Carmen Valenzuela</span>
-        <span class="brand__role" data-i18n="brand_role">Psicóloga y psicoterapeuta</span>
+      <a class="brand brand--logo" href="#inicio">
+        <img src="/images/umbrales-mark.png" alt="Umbrales" width="160" height="130" decoding="async" />
       </a>
 
       <nav class="nav" aria-label="Principal">
         <a href="#inicio" data-i18n="nav_home">Inicio</a>
-        <a href="#sobre-carmen" data-i18n="nav_about">Sobre Carmen</a>
-        <a href="#servicios" data-i18n="nav_services">Servicios</a>
-        <a href="#modalidad" data-i18n="nav_modality">Modalidad</a>
-        <a href="#faq" data-i18n="nav_faq">Preguntas</a>
-        <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        <a href="#sobre-carmen" data-i18n="nav_about">Sobre mí</a>
+        <a href="#explorar" data-tab="servicios" data-i18n="nav_services">Servicios</a>
+        <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">Modalidades</a>
+        <a href="#explorar" data-tab="reservar" data-i18n="nav_book">Reservar</a>
+        <a href="#explorar" data-tab="contacto" data-i18n="nav_contact">Contacto</a>
       </nav>
 
       <div class="header-actions">
@@ -39,419 +38,293 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="nav-drawer" id="nav-drawer" hidden>
       <nav aria-label="Menú móvil">
         <a href="#inicio" data-i18n="nav_home">Inicio</a>
-        <a href="#sobre-carmen" data-i18n="nav_about">Sobre Carmen</a>
-        <a href="#servicios" data-i18n="nav_services">Servicios</a>
-        <a href="#enfoque" data-i18n="nav_approach">Enfoque</a>
-        <a href="#modalidad" data-i18n="nav_modality">Modalidad</a>
-        <a href="#faq" data-i18n="nav_faq">Preguntas</a>
-        <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        <a href="#sobre-carmen" data-i18n="nav_about">Sobre mí</a>
+        <a href="#explorar" data-tab="servicios" data-i18n="nav_services">Servicios</a>
+        <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">Modalidades</a>
+        <a href="#explorar" data-tab="reservar" data-i18n="nav_book">Reservar</a>
+        <a href="#explorar" data-tab="contacto" data-i18n="nav_contact">Contacto</a>
         <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_menu" data-event="cta_menu_mobile">Reservar una cita</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
-    <section class="hero" id="inicio" aria-labelledby="hero-brand">
-      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
-      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
-      <div class="hero__grid">
-        <div class="hero-copy">
-          <p class="hero__kicker hero-in"><i aria-hidden="true"></i> <span data-i18n="hero_kicker">Psicoterapia para adultos</span></p>
-          <p class="hero__brand hero-in" id="hero-brand">Carmen Valenzuela</p>
-          <p class="hero__role hero-in" data-i18n="brand_role">Psicóloga y psicoterapeuta</p>
-          <h1 class="hero__title hero-in" data-i18n="hero_title">Un espacio seguro para comprender lo que sientes y avanzar con mayor claridad.</h1>
-          <p class="hero__text hero-in" data-i18n="hero_text">Psicoterapia para adultos en San Isidro. Acompañamiento profesional, cercano y confidencial para afrontar procesos emocionales, duelos, dificultades personales y experiencias del pasado.</p>
+    <!-- PORTADA: identidad Umbrales -->
+    <section class="hero hero--umbrales" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-umbrales">
+        <div class="hero-umbrales__logo hero-in">
+          <img src="/images/umbrales-logo-portada.png" alt="Umbrales — Espacio de psicoterapia clínica" width="720" height="632" decoding="async" fetchpriority="high" />
+        </div>
+        <div class="hero-umbrales__copy">
+          <blockquote class="hero-phrase hero-in">
+            <h1 class="hero__title" id="hero-title" data-i18n="hero_title">Un espacio para detenerse, comprender y atravesar lo que cambia.</h1>
+            <footer class="hero__byline" data-i18n="hero_byline">por Carmen Valenzuela — Psicóloga Clínica y Psicoterapeuta</footer>
+          </blockquote>
+          <p class="hero__text hero-in" data-i18n="hero_text">Umbrales nace de una manera de comprender la psicología y la psicoterapia: como un espacio para detenerse, mirar lo que está pasando y encontrar acompañamiento para atravesar aquello que marca un antes y un después.</p>
           <div class="btn-group hero-in">
             <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_hero" data-event="cta_hero_primary">Reservar una cita</a>
-            <a class="btn btn--ghost" href="#enfoque" data-i18n="cta_approach">Conocer el enfoque terapéutico</a>
+            <a class="btn btn--ghost" href="#explorar" data-tab="servicios" data-i18n="cta_explore">¿En qué puedo ayudarte?</a>
           </div>
-          <ul class="trust-row hero-in">
-            <li data-i18n="trust_1">Atención presencial y virtual</li>
-            <li data-i18n="trust_2">Sesiones con cita previa</li>
-            <li data-i18n="trust_3">Atención confidencial</li>
-            <li data-i18n="trust_4">Terapia para adultos</li>
-          </ul>
-        </div>
-        <div class="hero__portrait hero-in hero-in--photo">
-          <picture>
-            <source srcset="/images/carmen-cutout.webp" type="image/webp" />
-            <img src="/images/carmen-cutout.png" alt="Carmen Valenzuela, psicóloga y psicoterapeuta" width="1168" height="1003" decoding="async" fetchpriority="high" />
-          </picture>
         </div>
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Psicoterapia para adultos</span><span>Espacio seguro</span><span>Presencial y virtual</span><span>Confidencial</span><span>Acompañamiento ético</span>
-        <span>Psicoterapia para adultos</span><span>Espacio seguro</span><span>Presencial y virtual</span><span>Confidencial</span><span>Acompañamiento ético</span>
-      </div>
-    </div>
-
+    <!-- SOBRE CARMEN -->
     <section class="section" id="sobre-carmen">
       <div class="container about">
         <div class="about__photo reveal">
           <picture>
-            <source srcset="/images/carmen-bw-cutout.webp" type="image/webp" />
-            <img src="/images/carmen-bw-cutout.png" alt="Retrato profesional de Carmen Valenzuela" width="735" height="775" loading="lazy" decoding="async" />
+            <source srcset="/images/carmen-valenzuela-cutout.webp" type="image/webp" />
+            <img src="/images/carmen-valenzuela-cutout.png" alt="Retrato profesional de Carmen Valenzuela" width="1168" height="1003" loading="lazy" decoding="async" />
           </picture>
         </div>
         <div class="reveal">
-          <p class="section__eyebrow" data-i18n="about_eyebrow">Sobre Carmen</p>
-          <h2 class="section__title" data-i18n="about_title">Acompañamiento cercano, con rigor profesional</h2>
-          <p data-i18n="about_p1">Soy Carmen N. Valenzuela Avalos, psicóloga clínica y psicoterapeuta. Me especializo en acompañar a adolescentes, jóvenes y adultos que atraviesan momentos de cambio, malestar emocional, dificultades relacionales o situaciones de vida en las que necesitan un espacio para comprender mejor lo que les está ocurriendo.</p>
-          <p data-i18n="about_p2">Mi experiencia se ha desarrollado acompañando a personas y familias que atraviesan procesos de enfermedad, condiciones crónicas de salud, situaciones de vulnerabilidad y cambios que pueden transformar profundamente sus vidas. Frente a estas vivencias, el acompañamiento psicoterapéutico puede ser un espacio para elaborar lo que está sucediendo, sostener los recursos y encontrar nuevas vías para transitar una realidad distinta.</p>
-          <ul class="about__meta">
-            <li><strong data-i18n="meta_license">Colegiatura</strong><span data-i18n="data_license">C.Ps.P. 46485</span></li>
-            <li><strong data-i18n="meta_education">Formación académica</strong><span data-i18n="data_education">Lic. en Psicología Clínica (UPC) · Maestría en Gestión de la Educación (USIL) · Formación en Psicoterapia Psicoanalítica (Instituto Inter-cambio)</span></li>
-            <li><strong data-i18n="meta_specialty">Especializaciones</strong><span data-i18n="data_specialty">Adolescentes, jóvenes y adultos · Cuidados paliativos y acompañamiento en procesos de enfermedad, cronicidad y final de vida (OPS)</span></li>
-            <li><strong data-i18n="meta_experience">Experiencia</strong><span data-i18n="data_experience">Atención clínica, comunitaria, acompañamiento psicopedagógico y docencia universitaria</span></li>
-            <li><strong data-i18n="meta_approach">Enfoque terapéutico</strong><span data-i18n="meta_approach_text">Psicoterapia orientada a comprender emociones, patrones y vínculos que influyen en el presente.</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+          <p class="section__eyebrow" data-i18n="about_eyebrow">Sobre mí</p>
+          <h2 class="section__title" data-i18n="about_title">Comprender para acompañar</h2>
+          <p class="section__lead" data-i18n="about_lead">Acercarnos a tu historia para comprender lo que estás viviendo y encontrar nuevas formas de atravesarlo.</p>
+          <p data-i18n="about_p1">Soy Carmen N. Valenzuela Avalos, psicóloga clínica y psicoterapeuta psicoanalítica.</p>
+          <p data-i18n="about_p2">Mi forma de acompañar parte de una mirada que entiende a cada persona en relación con su historia, vínculos y las circunstancias que atraviesa. Acompaño procesos en los que algo de la vida cambia, se pierde, se transforma o deja de ser como antes: momentos de crisis, duelos y pérdidas, transiciones vitales, dificultades vinculares y el impacto de diversas enfermedades y condiciones crónicas de salud.</p>
+          <p data-i18n="about_p3">A lo largo de mi trayectoria, he trabajado en distintos contextos clínicos, educativos y comunitarios, acompañando a personas y familias en condiciones de vulnerabilidad y en diferentes momentos a lo largo de la vida. Estas experiencias han enriquecido mi manera de comprender el sufrimiento y reforzaron la importancia de construir un espacio terapéutico seguro, respetuoso y contextualizado a la singularidad de cada persona.</p>
+          <p data-i18n="about_p4">Mi formación y práctica clínica parten desde una orientación psicoanalítica contemporánea, con una mirada que busca comprender no solo aquello que genera malestar en el presente, teniendo en cuenta la historia personal, sus relaciones y vínculos, así como las experiencias que han ido dando forma a la manera en que cada persona vive y afronta lo que le sucede.</p>
 
-    <section class="section section--soft" id="servicios">
-      <div class="container">
-        <header class="services-intro reveal">
-          <p class="section__eyebrow" data-i18n="services_eyebrow">Servicios</p>
-          <h2 class="section__title" data-i18n="services_title">Psicoterapia, evaluaciones y acompañamiento</h2>
-          <p class="section__lead" data-i18n="services_lead">Dos vías de atención profesional, y un acompañamiento que se adapta a lo que estás atravesando.</p>
-        </header>
-
-        <div class="offers">
-          <article class="offer reveal">
-            <div class="offer__top">
-              <span class="offer__index" aria-hidden="true">01</span>
-              <span class="offer__tag" data-i18n="svc1_tag">Servicio principal</span>
-            </div>
-            <h3 data-i18n="svc1_t">Psicoterapia individual para adultos</h3>
-            <p data-i18n="svc1_d">Un espacio regular para pensar, sentir y elaborar lo que atraviesas, con acompañamiento profesional, cercano y confidencial.</p>
-            <ul class="offer__points">
-              <li data-i18n="svc1_p1">Sesiones con cita previa</li>
-              <li data-i18n="svc1_p2">Presencial o virtual</li>
-              <li data-i18n="svc1_p3">Proceso personalizado</li>
+          <div class="formation">
+            <h3 class="formation__title" data-i18n="formation_title">Formación profesional</h3>
+            <ul class="formation__list">
+              <li data-i18n="formation_1">Licenciatura en Psicología Clínica (UPC)</li>
+              <li data-i18n="formation_2">CPsP. 46485</li>
+              <li data-i18n="formation_3">Maestría en Gestión de la Educación (USIL)</li>
+              <li data-i18n="formation_4">Formación en Psicoterapia Psicoanalítica (Instituto Inter-cambio)</li>
+              <li data-i18n="formation_5">Fundamentos del Cuidado Paliativo (OPS)</li>
             </ul>
-            <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc1" data-event="cta_servicio_individual">Consultar por WhatsApp</a>
-          </article>
-
-          <article class="offer offer--alt reveal">
-            <div class="offer__top">
-              <span class="offer__index" aria-hidden="true">02</span>
-              <span class="offer__tag" data-i18n="svc_eval_tag">Servicio principal</span>
-            </div>
-            <h3 data-i18n="svc_eval_t">Evaluaciones psicológicas</h3>
-            <p data-i18n="svc_eval_d">Orientación y evaluación profesional según tu necesidad, con un proceso claro, ético y confidencial.</p>
-            <ul class="offer__points">
-              <li data-i18n="svc_eval_p1">Enfoque ético y claro</li>
-              <li data-i18n="svc_eval_p2">Según tu necesidad</li>
-              <li data-i18n="svc_eval_p3">Confidencialidad garantizada</li>
-            </ul>
-            <a class="btn btn--ghost js-whatsapp" href="#" data-i18n="cta_service_wa" data-i18n-wa="wa_svc_eval" data-event="cta_servicio_evaluaciones">Consultar por WhatsApp</a>
-          </article>
-        </div>
-
-        <div class="motives reveal">
-          <div class="motives__head">
-            <p class="motives__eyebrow" data-i18n="motives_eyebrow">Motivos frecuentes de consulta</p>
-            <p class="motives__lead" data-i18n="motives_lead">No necesitas tenerlo todo claro para escribir. Estos son algunos de los temas con los que trabajo.</p>
-          </div>
-          <ul class="motives__list">
-            <li>
-              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc2" data-event="cta_motivo_duelo">
-                <span class="motives__num" aria-hidden="true">01</span>
-                <div>
-                  <strong data-i18n="svc2_t">Acompañamiento en procesos de duelo</strong>
-                  <p data-i18n="svc2_d">Apoyo para atravesar pérdidas y cambios significativos, respetando tu ritmo y tu manera de sentir.</p>
-                  <span class="motives__action"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc3" data-event="cta_motivo_ansiedad">
-                <span class="motives__num" aria-hidden="true">02</span>
-                <div>
-                  <strong data-i18n="svc3_t">Ansiedad, estrés y sobrecarga emocional</strong>
-                  <p data-i18n="svc3_d">Trabajo para comprender lo que tensiona tu día a día y encontrar mayor estabilidad emocional.</p>
-                  <span class="motives__action"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc4" data-event="cta_motivo_relaciones">
-                <span class="motives__num" aria-hidden="true">03</span>
-                <div>
-                  <strong data-i18n="svc4_t">Dificultades en las relaciones personales</strong>
-                  <p data-i18n="svc4_d">Exploración de vínculos, límites y patrones que se repiten en la vida afectiva y cotidiana.</p>
-                  <span class="motives__action"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc5" data-event="cta_motivo_pasado">
-                <span class="motives__num" aria-hidden="true">04</span>
-                <div>
-                  <strong data-i18n="svc5_t">Experiencias del pasado</strong>
-                  <p data-i18n="svc5_d">Acompañamiento para comprender cómo lo vivido sigue influyendo en tu presente y en tus decisiones.</p>
-                  <span class="motives__action"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc6" data-event="cta_motivo_cambios">
-                <span class="motives__num" aria-hidden="true">05</span>
-                <div>
-                  <strong data-i18n="svc6_t">Cambios importantes y crisis personales</strong>
-                  <p data-i18n="svc6_d">Sostén profesional en etapas de transición, incertidumbre o redefinición personal.</p>
-                  <span class="motives__action"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="motives__link js-whatsapp" href="#" data-i18n-wa="wa_svc7" data-event="cta_motivo_crecimiento">
-                <span class="motives__num" aria-hidden="true">06</span>
-                <div>
-                  <strong data-i18n="svc7_t">Autoconocimiento y crecimiento personal</strong>
-                  <p data-i18n="svc7_d">Un proceso para conocerte con mayor profundidad y cuidar tu bienestar emocional de forma sostenida.</p>
-                  <span class="motives__action"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_service_wa">Consultar por WhatsApp</span></span>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="motives__cta">
-            <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book_wa" data-i18n-wa="wa_motivos" data-event="cta_servicios_motivos">Reservar una cita por WhatsApp</a>
+            <p class="formation__note"><strong data-i18n="formation_cont_label">Actualización continua</strong> — <span data-i18n="formation_cont">Psicoterapia, artes expresivas, acompañamiento en procesos de enfermedad, duelo y transiciones vitales.</span></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="enfoque">
-      <div class="container split">
-        <div class="reveal">
-          <p class="section__eyebrow" data-i18n="approach_eyebrow">Enfoque terapéutico</p>
-          <h2 class="section__title" data-i18n="approach_title">Comprender para habitar el presente con más claridad</h2>
-          <p class="section__lead" data-i18n="approach_lead">El trabajo terapéutico busca entender emociones, patrones, vínculos y experiencias que influyen en tu vida actual. No se trata de soluciones rápidas, sino de un proceso cuidadoso y respetuoso.</p>
-          <p data-i18n="approach_p">Cada persona llega con una historia distinta. Por eso, el acompañamiento se adapta a tus necesidades, a tu ritmo y a lo que tiene sentido para ti en este momento.</p>
-        </div>
-        <div class="panel reveal">
-          <h3 data-i18n="approach_box_t">En la práctica, esto implica</h3>
-          <ul>
-            <li data-i18n="approach_li1">Un espacio de escucha atenta y confidencial.</li>
-            <li data-i18n="approach_li2">Explorar lo que sientes sin apresurar conclusiones.</li>
-            <li data-i18n="approach_li3">Reconocer patrones que se repiten en tu vida cotidiana.</li>
-            <li data-i18n="approach_li4">Integrar experiencias del pasado cuando resulta necesario.</li>
-            <li data-i18n="approach_li5">Construir, con el tiempo, mayor claridad y bienestar emocional.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="modalidad">
+    <!-- PESTAÑAS -->
+    <section class="section section--soft" id="explorar">
       <div class="container">
-        <p class="section__eyebrow" data-i18n="modality_eyebrow">Modalidad de atención</p>
-        <h2 class="section__title" data-i18n="modality_title">Presencial en San Isidro o virtual</h2>
-        <p class="section__lead" data-i18n="modality_lead">Puedes elegir la modalidad que mejor se ajuste a tu rutina. Las sesiones se realizan con cita previa.</p>
-        <div class="split">
-          <div class="panel reveal">
-            <h3 data-i18n="modality_pres_t">Atención presencial</h3>
-            <p data-i18n="modality_pres_p">Consultorio en San Isidro, Lima. Av. Pezet 1449 (3.er piso).</p>
-            <ul>
-              <li data-i18n="modality_li1">Sesiones con cita previa</li>
-              <li><span data-i18n="modality_li2_label">Duración:</span> <span data-i18n="data_duration">50 minutos</span></li>
-              <li><span data-i18n="modality_li3_label">Agenda:</span> <span data-i18n="data_schedule">Con cita previa, según disponibilidad de agenda</span></li>
-            </ul>
-            <div class="map-slot">
-              <iframe
-                title="Mapa del consultorio en San Isidro"
-                src="https://maps.google.com/maps?q=Av.%20Pezet%201449%2C%20San%20Isidro%2C%20Lima%2C%20Per%C3%BA&z=16&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen
-              ></iframe>
-              <div class="map-slot__caption">
-                <strong data-i18n="map_title">Ubicación del consultorio</strong>
-                <p data-i18n="data_address">Av. Pezet 1449 (3.er piso), San Isidro, Lima</p>
-                <a
-                  class="map-slot__link"
-                  href="https://www.google.com/maps/search/?api=1&query=Av.+Pezet+1449,+San+Isidro,+Lima,+Perú"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="map_open"
-                >Abrir en Google Maps</a>
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Secciones">
+            <button type="button" class="tabs__btn is-active" role="tab" id="tab-servicios" aria-selected="true" aria-controls="panel-servicios" data-tab="servicios" data-i18n="tab_services">¿En qué puedo ayudarte?</button>
+            <button type="button" class="tabs__btn" role="tab" id="tab-modalidades" aria-selected="false" aria-controls="panel-modalidades" data-tab="modalidades" data-i18n="tab_modality">Cómo atendemos</button>
+            <button type="button" class="tabs__btn" role="tab" id="tab-reservar" aria-selected="false" aria-controls="panel-reservar" data-tab="reservar" data-i18n="tab_book">Agendar un encuentro</button>
+            <button type="button" class="tabs__btn" role="tab" id="tab-contacto" aria-selected="false" aria-controls="panel-contacto" data-tab="contacto" data-i18n="tab_contact">Contacto</button>
+          </div>
+
+          <!-- A) SERVICIOS -->
+          <div class="tab-panel is-active" role="tabpanel" id="panel-servicios" aria-labelledby="tab-servicios" data-panel="servicios">
+            <header class="tab-intro">
+              <h2 class="section__title" data-i18n="svc_title">¿En qué puedo ayudarte?</h2>
+              <p class="section__lead" data-i18n="svc_lead">Psicoterapia y evaluaciones psicológicas y espacios de acompañamiento para distintos momentos y necesidades a lo largo de la vida.</p>
+            </header>
+
+            <div class="offers">
+              <article class="offer">
+                <div class="offer__top"><span class="offer__index" aria-hidden="true">01</span></div>
+                <h3 data-i18n="svc_psy_t">Psicoterapia</h3>
+                <p data-i18n="svc_psy_d">Un espacio de acompañamiento especializado para adolescentes, jóvenes y adultos que atraviesan momentos de cambio con la finalidad de comprender y elaborar aquello que están viviendo.</p>
+                <p class="offer__sub" data-i18n="svc_psy_useful">Puede serte útil si estás atravesando:</p>
+                <ul class="offer__points">
+                  <li data-i18n="svc_psy_1">Ansiedad, angustia o malestar emocional</li>
+                  <li data-i18n="svc_psy_2">Cambios o transiciones importantes</li>
+                  <li data-i18n="svc_psy_3">Crisis personales o momentos de gran incertidumbre</li>
+                  <li data-i18n="svc_psy_4">Duelos y pérdidas</li>
+                  <li data-i18n="svc_psy_5">Dificultades en relaciones y vínculos</li>
+                  <li data-i18n="svc_psy_6">Procesos de enfermedad o condiciones crónicas</li>
+                </ul>
+              </article>
+
+              <article class="offer offer--alt">
+                <div class="offer__top"><span class="offer__index" aria-hidden="true">02</span></div>
+                <h3 data-i18n="svc_eval_t">Evaluaciones psicológicas</h3>
+                <p><strong data-i18n="svc_eval_int_t">Evaluación psicológica integral para niños y adolescentes:</strong> <span data-i18n="svc_eval_int_d">un proceso orientado a comprender de manera amplia su desarrollo y funcionamiento cognitivo, emocional, conductual y relacional, considerando también su contexto social, familiar y educativo.</span></p>
+                <p><strong data-i18n="svc_eval_voc_t">Evaluación vocacional para adolescentes y jóvenes:</strong> <span data-i18n="svc_eval_voc_d">un espacio para explorar intereses, habilidades, motivaciones y aspectos personales relevantes para la toma de decisiones académicas y vocacionales en el proceso de construcción de proyecto de vida.</span></p>
+                <p class="note" data-i18n="svc_eval_note">*Sólo disponible en modalidad presencial; consultar fechas posibles y honorarios.</p>
+              </article>
+            </div>
+
+            <article class="offer offer--community">
+              <div class="offer__top"><span class="offer__index" aria-hidden="true">03</span></div>
+              <h3 data-i18n="svc_com_t">Umbrales en Comunidad</h3>
+              <p data-i18n="svc_com_d">Diseñamos talleres, charlas y espacios de formación para instituciones, equipos y comunidades de acuerdo con sus necesidades y contexto.</p>
+              <p class="offer__sub" data-i18n="svc_com_topics">Temas frecuentes:</p>
+              <ul class="offer__points">
+                <li data-i18n="svc_com_1">Bienestar y salud mental</li>
+                <li data-i18n="svc_com_2">Comunicación, regulación emocional y vínculos</li>
+                <li data-i18n="svc_com_3">Cuidado de quienes cuidan</li>
+                <li data-i18n="svc_com_4">Herramientas para equipos que acompañan situaciones de vulnerabilidad</li>
+                <li data-i18n="svc_com_5">Acompañamiento en condiciones crónicas</li>
+              </ul>
+              <p class="note" data-i18n="svc_com_note">*Disponibilidad presencial y virtual; escríbenos y solicita una propuesta.</p>
+              <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_write_wa" data-i18n-wa="wa_servicios" data-event="cta_servicios">Escribir por WhatsApp</a>
+            </article>
+          </div>
+
+          <!-- B) MODALIDADES -->
+          <div class="tab-panel" role="tabpanel" id="panel-modalidades" aria-labelledby="tab-modalidades" data-panel="modalidades" hidden>
+            <header class="tab-intro">
+              <h2 class="section__title" data-i18n="mod_title">Cómo atendemos</h2>
+              <p class="section__lead" data-i18n="mod_lead">Dos formas de encontrarnos, con el mismo cuidado y atención en cada espacio.</p>
+            </header>
+
+            <div class="offers">
+              <article class="offer">
+                <div class="offer__top"><span class="offer__index" aria-hidden="true">01</span></div>
+                <h3 data-i18n="mod_pres_t">Presencial</h3>
+                <p class="offer__sub" data-i18n="mod_pres_phrase">Un espacio para encontrarnos en persona.</p>
+                <p data-i18n="mod_pres_d">La atención presencial se realiza en San Isidro, Lima, en un espacio pensado para brindar privacidad, tranquilidad y comodidad durante las sesiones.</p>
+                <p><strong data-i18n="mod_location_label">Ubicación:</strong> <span data-i18n="data_address">Av. Pezet 1449 (3.er piso), San Isidro, Lima</span></p>
+                <div class="map-slot">
+                  <iframe
+                    title="Mapa del consultorio"
+                    src="https://maps.google.com/maps?q=Av.%20Pezet%201449%2C%20San%20Isidro%2C%20Lima%2C%20Per%C3%BA&z=16&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </article>
+
+              <article class="offer offer--alt">
+                <div class="offer__top"><span class="offer__index" aria-hidden="true">02</span></div>
+                <h3 data-i18n="mod_virt_t">Virtual</h3>
+                <p class="offer__sub" data-i18n="mod_virt_phrase">Un espacio de encuentro desde donde estés.</p>
+                <p data-i18n="mod_virt_d">La atención virtual permite realizar sesiones por videollamada desde un lugar que te resulte cómodo y privado, manteniendo el mismo cuidado y confidencialidad del espacio presencial.</p>
+                <p><strong data-i18n="mod_virt_label">Modalidad:</strong> <span data-i18n="mod_virt_mode">Sesiones por videollamada.</span></p>
+              </article>
+            </div>
+
+            <aside class="mod-meta">
+              <p data-i18n="mod_common">Las sesiones tienen una duración de 50 minutos y se realizan con previa cita, según disponibilidad de agenda.</p>
+            </aside>
+
+            <article class="offer offer--fees">
+              <div class="offer__top"><span class="offer__index" aria-hidden="true">03</span></div>
+              <h3 data-i18n="fees_title">Honorarios</h3>
+              <p class="fees__lead" data-i18n="fees_p1">La tarifa estándar de las sesiones es de S/120.</p>
+              <p data-i18n="fees_p2">Entendiendo que las posibilidades económicas son diferentes, Umbrales cuenta con una política de honorarios escalonados, con algunas tarifas diferenciadas para facilitar el acceso a personas con distintas posibilidades económicas, sujeto a disponibilidad de agenda.</p>
+              <p data-i18n="fees_p3">La tarifa se acuerda al iniciar el proceso y busca sostener un equilibrio entre accesibilidad, continuidad del tratamiento y sostenibilidad del espacio.</p>
+            </article>
+          </div>
+
+          <!-- C) RESERVAR -->
+          <div class="tab-panel" role="tabpanel" id="panel-reservar" aria-labelledby="tab-reservar" data-panel="reservar" hidden>
+            <header class="tab-intro">
+              <h2 class="section__title" data-i18n="book_title">Agendar un encuentro</h2>
+              <p class="section__lead" data-i18n="book_eyebrow">Dar el primer paso, a tu ritmo.</p>
+              <p data-i18n="book_lead">Comenzar no tiene que ser complicado. Escríbeme y conversamos: si estás atravesando un momento que merece ser escuchado, podemos encontrar juntos un espacio para ello.</p>
+            </header>
+
+            <div class="steps">
+              <article class="step">
+                <div class="step__top"><span class="step__num" aria-hidden="true">01</span></div>
+                <h3 data-i18n="book_s1_t">Escríbeme</h3>
+                <p data-i18n="book_s1_d">Cuéntame brevemente qué tipo de atención estás buscando.</p>
+              </article>
+              <article class="step">
+                <div class="step__top"><span class="step__num" aria-hidden="true">02</span></div>
+                <h3 data-i18n="book_s2_t">Conversemos</h3>
+                <p data-i18n="book_s2_d">Revisamos juntos la disponibilidad y modalidad que se ajusta a ti.</p>
+              </article>
+              <article class="step">
+                <div class="step__top"><span class="step__num" aria-hidden="true">03</span></div>
+                <h3 data-i18n="book_s3_t">Confirma tu sesión</h3>
+                <p data-i18n="book_s3_d">Una vez coordinados los detalles, realizas el abono y el horario queda reservado para ti.</p>
+              </article>
+            </div>
+
+            <div class="book-cta">
+              <p class="book-thanks" data-i18n="book_thanks">Pronto nos encontraremos; gracias por confiar en este espacio.</p>
+              <div class="btn-group">
+                <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_write_wa" data-i18n-wa="wa_reservar" data-event="cta_reservar">Escribir por WhatsApp</a>
+              </div>
+              <p class="note"><span data-i18n="book_email_label">Si necesitas comunicarte, puedes escribirnos a:</span> <a href="mailto:contacto@carmenvalenzuela.pe">contacto@carmenvalenzuela.pe</a></p>
+              <p class="note" data-i18n="book_social_note">También puedes encontrarnos en redes (Facebook e Instagram).</p>
+              <p class="book-cta__community" data-i18n="book_community">Umbrales también es un espacio que se construye en comunidad. Puedes seguirnos para conocer más sobre la propuesta, actividades y contenidos.</p>
+              <div class="social-links">
+                <a class="social-links__item" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+                <a class="social-links__item" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a>
+                <a class="social-links__item" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
               </div>
             </div>
-            <p style="margin-top:1.1rem">
-              <a class="btn btn--wa js-whatsapp" href="#" data-i18n="cta_availability" data-i18n-wa="wa_avail" data-event="cta_disponibilidad">Consultar disponibilidad</a>
-            </p>
           </div>
-          <div class="panel reveal">
-            <h3 data-i18n="modality_virt_t">Atención virtual</h3>
-            <p data-i18n="modality_virt_p">Psicoterapia online para quienes prefieren o necesitan atenderse a distancia, dentro del marco ético y profesional correspondiente.</p>
-            <ul>
-              <li data-i18n="modality_virt_li1">Sesiones por videollamada con cita previa</li>
-              <li data-i18n="modality_virt_li2">Misma confidencialidad y cuidado profesional</li>
-              <li data-i18n="modality_virt_li3">Ideal si trabajas o vives en zonas aledañas o fuera de Lima</li>
-            </ul>
-            <p style="margin-top:1.1rem">
-              <a class="btn btn--wa js-whatsapp" href="#" data-i18n-wa="wa_virtual" data-event="cta_virtual"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_write_wa">Escribir por WhatsApp</span></a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="proceso">
-      <div class="container">
-        <p class="section__eyebrow" data-i18n="process_eyebrow">Reservar una cita</p>
-        <h2 class="section__title" data-i18n="process_title">Un proceso sencillo y respetuoso</h2>
-        <p class="section__lead" data-i18n="process_lead">Dar el primer paso no tiene que ser complicado. Conversamos con calma para encontrar un horario adecuado.</p>
-        <div class="steps">
-          <article class="step reveal"><h3 data-i18n="step1_t">Comunícate por WhatsApp</h3><p data-i18n="step1_d">Escríbeme para compartir, de forma breve, qué tipo de atención estás buscando.</p></article>
-          <article class="step reveal"><h3 data-i18n="step2_t">Consulta los horarios</h3><p data-i18n="step2_d">Revisamos juntos la disponibilidad y la modalidad que mejor se ajuste a ti.</p></article>
-          <article class="step reveal"><h3 data-i18n="step3_t">Confirma tu sesión</h3><p data-i18n="step3_d">Coordinamos los detalles necesarios y confirmamos tu cita con claridad.</p></article>
-        </div>
-        <div class="btn-group" style="margin-top:2rem">
-          <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_proceso" data-event="cta_proceso">Reservar una cita</a>
-        </div>
-      </div>
-    </section>
+          <!-- D) CONTACTO -->
+          <div class="tab-panel" role="tabpanel" id="panel-contacto" aria-labelledby="tab-contacto" data-panel="contacto" hidden>
+            <header class="tab-intro">
+              <h2 class="section__title" data-i18n="contact_title">Contacto</h2>
+              <p class="section__lead" data-i18n="contact_lead">Escríbeme por WhatsApp o síguenos en redes. Prefiero un mensaje breve; no pedimos detalles clínicos por aquí.</p>
+            </header>
 
-    <section class="section section--ink" id="confianza">
-      <div class="container">
-        <p class="section__eyebrow" style="color:var(--clay-soft)" data-i18n="trust_eyebrow">Compromiso profesional</p>
-        <h2 class="section__title" data-i18n="trust_title">Un espacio seguro, ético y confidencial</h2>
-        <div class="trust-grid">
-          <article class="trust-item reveal"><h3 data-i18n="trust_c1_t">Confidencialidad</h3><p data-i18n="trust_c1_d">Lo que compartes en sesión se maneja con rigor ético y respeto absoluto por tu privacidad.</p></article>
-          <article class="trust-item reveal"><h3 data-i18n="trust_c2_t">Atención personalizada</h3><p data-i18n="trust_c2_d">El proceso se construye a partir de tu historia, tus necesidades y el momento que estás viviendo.</p></article>
-          <article class="trust-item reveal"><h3 data-i18n="trust_c3_t">Espacio seguro y respetuoso</h3><p data-i18n="trust_c3_d">Un lugar para hablar con libertad, sin presión y con contención profesional.</p></article>
-          <article class="trust-item reveal"><h3 data-i18n="trust_c4_t">Ética profesional</h3><p data-i18n="trust_c4_d">El acompañamiento se sostiene en criterios deontológicos y en una práctica responsable.</p></article>
-          <article class="trust-item reveal"><h3 data-i18n="trust_c5_t">Sin juicios</h3><p data-i18n="trust_c5_d">Puedes llegar tal como estás. El foco está en comprender, no en etiquetar.</p></article>
-        </div>
-      </div>
-    </section>
+            <div class="contact-channels">
+              <a class="footer-chip js-whatsapp" href="#" data-i18n-wa="wa_contact" data-event="cta_contacto_wa">
+                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg></span>
+                <span class="footer-chip__text"><strong>WhatsApp</strong><span>+51 949 722 086</span></span>
+              </a>
+              <a class="footer-chip" href="mailto:contacto@carmenvalenzuela.pe">
+                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg></span>
+                <span class="footer-chip__text"><strong data-i18n="contact_email_label">Correo</strong><span>contacto@carmenvalenzuela.pe</span></span>
+              </a>
+              <a class="footer-chip" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
+                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+                <span class="footer-chip__text"><strong>Instagram</strong><span>@carmenvalenzuela.psi</span></span>
+              </a>
+              <a class="footer-chip" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
+                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></span>
+                <span class="footer-chip__text"><strong>Facebook</strong><span>Carmen Valenzuela</span></span>
+              </a>
+              <a class="footer-chip" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer">
+                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></span>
+                <span class="footer-chip__text"><strong>LinkedIn</strong><span>Carmen Valenzuela</span></span>
+              </a>
+            </div>
 
-    <section class="section" id="faq">
-      <div class="container">
-        <p class="section__eyebrow" data-i18n="faq_eyebrow">Preguntas frecuentes</p>
-        <h2 class="section__title" data-i18n="faq_title">Resolvamos tus dudas</h2>
-        <div class="faq">
-          <details class="reveal"><summary data-i18n="faq1_q">¿Cómo sé si necesito iniciar psicoterapia?</summary><p data-i18n="faq1_a">Si sientes malestar emocional persistente, dificultad para afrontar cambios, duelos, conflictos personales o patrones que se repiten, una consulta puede ayudarte a orientarte. No es necesario estar en crisis para pedir acompañamiento.</p></details>
-          <details class="reveal"><summary data-i18n="faq2_q">¿La atención es presencial o virtual?</summary><p data-i18n="faq2_a">Ambas modalidades están disponibles: presencial en San Isidro y atención psicológica virtual, siempre con cita previa.</p></details>
-          <details class="reveal"><summary data-i18n="faq3_q">¿Cuánto dura una sesión?</summary><p><span data-i18n="faq3_a">La duración referencial es</span> <span data-i18n="data_duration">50 minutos</span><span data-i18n="faq3_a2">. Se confirma al coordinar tu cita.</span></p></details>
-          <details class="reveal"><summary data-i18n="faq4_q">¿Con qué frecuencia se realizan las sesiones?</summary><p data-i18n="faq4_a">Por lo general, con una frecuencia semanal o según lo que el proceso y tus necesidades sugieran. Esto se conversa en las primeras sesiones.</p></details>
-          <details class="reveal"><summary data-i18n="faq5_q">¿Cómo puedo reservar una cita?</summary><p data-i18n="faq5_a">Puedes escribir por WhatsApp o completar el formulario de contacto. Revisamos disponibilidad y confirmamos tu sesión.</p></details>
-          <details class="reveal"><summary data-i18n="faq6_q">¿Dónde está ubicado el consultorio?</summary><p><span data-i18n="faq6_a">En San Isidro, Lima. Dirección:</span> <span data-i18n="data_address">Av. Pezet 1449 (3.er piso), San Isidro, Lima</span></p></details>
-          <details class="reveal"><summary data-i18n="faq7_q">¿La información compartida durante las sesiones es confidencial?</summary><p data-i18n="faq7_a">Sí. La confidencialidad es un pilar del trabajo terapéutico y se resguarda conforme a la ética profesional aplicable.</p></details>
-          <details class="reveal"><summary data-i18n="faq8_q">¿Cuál es el costo de una consulta?</summary><p><span data-i18n="data_price">S/ 100 por sesión</span> <span data-i18n="faq8_a2">· Contamos con tarifas diferenciadas para algunos casos, previa evaluación. Consulta la disponibilidad por WhatsApp.</span></p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-final">
-      <div class="container reveal">
-        <h2 class="section__title" data-i18n="cta_final_title">Dar el primer paso puede ser difícil</h2>
-        <p class="section__lead" data-i18n="cta_final_lead">Podemos conversar para encontrar una modalidad de atención adecuada para ti.</p>
-        <div class="btn-group">
-          <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book_wa" data-i18n-wa="wa_final" data-event="cta_final">Reservar una cita por WhatsApp</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="contacto">
-      <div class="container contact-grid">
-        <div class="reveal">
-          <p class="section__eyebrow" data-i18n="contact_eyebrow">Contacto</p>
-          <h2 class="section__title" data-i18n="contact_title">Escribe o deja tus datos</h2>
-          <p class="section__lead" data-i18n="contact_lead">Prefieres WhatsApp o un mensaje breve. Solo pedimos información básica de contacto; no detalles clínicos.</p>
-          <ul class="footer-list" style="color:var(--mute)">
-            <li><strong data-i18n="label_whatsapp">WhatsApp:</strong> <a class="js-whatsapp" href="#" data-i18n-wa="wa_contact" data-event="cta_contacto_numero">+51 949 722 086</a></li>
-            <li><strong data-i18n="label_email">Correo:</strong> <a href="mailto:contacto@carmenvalenzuela.pe">contacto@carmenvalenzuela.pe</a></li>
-            <li><strong data-i18n="label_location">Ubicación:</strong> <span data-i18n="location_value">San Isidro, Lima, Perú</span></li>
-          </ul>
-          <p class="social-label" data-i18n="footer_social">Redes</p>
-          <div class="social-links" aria-label="Redes sociales">
-            <a class="social-links__item" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
-              Instagram
-            </a>
-            <a class="social-links__item" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
-              Facebook
-            </a>
-            <a class="social-links__item" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
-              LinkedIn
-            </a>
-          </div>
-          <p style="margin-top:1.25rem">
-            <a class="btn btn--wa js-whatsapp" href="#" data-i18n-wa="wa_contact" data-event="cta_contacto"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg> <span data-i18n="cta_write_wa">Escribir por WhatsApp</span></a>
-          </p>
-          <div class="map-slot map-slot--contact">
-            <iframe
-              title="Mapa del consultorio en San Isidro"
-              src="https://maps.google.com/maps?q=Av.%20Pezet%201449%2C%20San%20Isidro%2C%20Lima%2C%20Per%C3%BA&z=16&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
-            <div class="map-slot__caption">
-              <strong data-i18n="map_title">Ubicación del consultorio</strong>
-              <p data-i18n="data_address">Av. Pezet 1449 (3.er piso), San Isidro, Lima</p>
+            <div class="panel" style="margin-top:1.5rem">
+              <form class="form" id="contact-form" novalidate>
+                <div class="form-field">
+                  <label for="nombre" data-i18n="form_name">Nombre</label>
+                  <input id="nombre" name="nombre" type="text" autocomplete="name" required maxlength="80" data-i18n-placeholder="form_name_ph" placeholder="Tu nombre" />
+                </div>
+                <div class="form-field">
+                  <label for="telefono" data-i18n="form_phone">Teléfono / WhatsApp</label>
+                  <input id="telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="20" data-i18n-placeholder="form_phone_ph" placeholder="Ej. 9XXXXXXXX" />
+                </div>
+                <div class="form-field">
+                  <label for="email"><span data-i18n="form_email">Correo electrónico</span> <span class="hint" data-i18n="form_email_opt">(opcional)</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="tu@correo.com" />
+                </div>
+                <div class="form-field">
+                  <label for="modalidad" data-i18n="form_modality">Modalidad preferida</label>
+                  <select id="modalidad" name="modalidad" required>
+                    <option value="" data-i18n="form_modality_ph">Selecciona una opción</option>
+                    <option value="presencial" data-i18n="form_mod_pres">Presencial en San Isidro</option>
+                    <option value="virtual" data-i18n="form_mod_virt">Virtual</option>
+                    <option value="indistinto" data-i18n="form_mod_any">Indistinto</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="horario" data-i18n="form_schedule">Horario de contacto</label>
+                  <select id="horario" name="horario" required>
+                    <option value="" data-i18n="form_modality_ph">Selecciona una opción</option>
+                    <option value="manana" data-i18n="form_sch_am">Mañana</option>
+                    <option value="tarde" data-i18n="form_sch_pm">Tarde</option>
+                    <option value="noche" data-i18n="form_sch_night">Noche</option>
+                  </select>
+                </div>
+                <div class="hp" aria-hidden="true"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off" /></div>
+                <label class="consent">
+                  <input type="checkbox" name="consentimiento" required />
+                  <span><span data-i18n="form_consent_before">He leído el</span> <a href="#aviso-privacidad" data-i18n="footer_privacy">Aviso de privacidad</a> <span data-i18n="form_consent_after">y autorizo el tratamiento de mis datos personales para contactarme respecto a una cita.</span></span>
+                </label>
+                <button class="btn btn--primary" type="submit" data-i18n="form_submit">Enviar solicitud</button>
+              </form>
+              <div class="form-success" id="form-success" role="status" aria-live="polite" data-i18n="form_success">Gracias. Tu solicitud fue registrada. Te contactaré pronto para coordinar tu cita.</div>
+              <div class="form-error" id="form-error" role="alert" aria-live="assertive" data-i18n="form_error">No se pudo enviar en este momento. Escríbeme por WhatsApp o inténtalo de nuevo.</div>
             </div>
           </div>
         </div>
-        <div class="panel reveal">
-          <form class="form" id="contact-form" novalidate>
-            <div class="form-field">
-              <label for="nombre" data-i18n="form_name">Nombre</label>
-              <input id="nombre" name="nombre" type="text" autocomplete="name" required maxlength="80" data-i18n-placeholder="form_name_ph" placeholder="Tu nombre" />
-            </div>
-            <div class="form-field">
-              <label for="telefono" data-i18n="form_phone">Teléfono / WhatsApp</label>
-              <input id="telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="20" data-i18n-placeholder="form_phone_ph" placeholder="Ej. 9XXXXXXXX" />
-            </div>
-            <div class="form-field">
-              <label for="email"><span data-i18n="form_email">Correo electrónico</span> <span class="hint" data-i18n="form_email_opt">(opcional)</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="tu@correo.com" />
-            </div>
-            <div class="form-field">
-              <label for="modalidad" data-i18n="form_modality">Modalidad preferida</label>
-              <select id="modalidad" name="modalidad" required>
-                <option value="" data-i18n="form_modality_ph">Selecciona una opción</option>
-                <option value="presencial" data-i18n="form_mod_pres">Presencial en San Isidro</option>
-                <option value="virtual" data-i18n="form_mod_virt">Virtual</option>
-                <option value="indistinto" data-i18n="form_mod_any">Indistinto</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="horario" data-i18n="form_schedule">Horario de contacto</label>
-              <select id="horario" name="horario" required>
-                <option value="" data-i18n="form_modality_ph">Selecciona una opción</option>
-                <option value="manana" data-i18n="form_sch_am">Mañana</option>
-                <option value="tarde" data-i18n="form_sch_pm">Tarde</option>
-                <option value="noche" data-i18n="form_sch_night">Noche</option>
-              </select>
-            </div>
-            <div class="hp" aria-hidden="true"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off" /></div>
-            <label class="consent">
-              <input type="checkbox" name="consentimiento" required />
-              <span data-i18n="form_consent">He leído el aviso de privacidad y autorizo el tratamiento de mis datos personales para contactarme respecto a una cita.</span>
-            </label>
-            <button class="btn btn--primary" type="submit" data-i18n="form_submit">Enviar solicitud</button>
-          </form>
-          <div class="form-success" id="form-success" role="status" aria-live="polite" data-i18n="form_success">Gracias. Tu solicitud fue registrada. Te contactaré pronto para coordinar tu cita.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="aviso-privacidad">
-      <div class="container" style="max-width:46rem">
-        <p class="section__eyebrow" data-i18n="legal_eyebrow">Legal</p>
-        <h2 class="section__title" data-i18n="legal_title">Aviso de privacidad</h2>
-        <p data-i18n="legal_p1">Los datos del formulario (nombre, teléfono, correo opcional, modalidad y horario de contacto) se utilizan únicamente para responder tu solicitud de cita. No se solicitan datos clínicos en este sitio.</p>
-        <p id="politica-datos"><strong data-i18n="legal_p2_strong">Política de tratamiento de datos:</strong><span data-i18n="legal_p2"> el tratamiento se realiza conforme a la normativa peruana aplicable en materia de protección de datos personales. Puedes solicitar la actualización o eliminación de tus datos de contacto escribiendo a</span> <a href="mailto:contacto@carmenvalenzuela.pe">contacto@carmenvalenzuela.pe</a>.</p>
-        <p class="note" data-i18n="legal_note">Texto legal preliminar: debe revisarse con asesoría especializada antes de publicar.</p>
       </div>
     </section>
   </main>
@@ -459,61 +332,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand-block">
-        <p class="footer-brand">Carmen Valenzuela</p>
-        <p class="footer-role" data-i18n="brand_role">Psicóloga y psicoterapeuta</p>
-        <p class="footer-meta"><span data-i18n="meta_license">Colegiatura</span>: <span data-i18n="data_license">C.Ps.P. 46485</span></p>
+        <p class="footer-brand">Umbrales</p>
+        <p class="footer-role" data-i18n="brand_role">Psicología y psicoterapia clínica</p>
+        <p class="footer-meta">Lic. Carmen Valenzuela Avalos · <span data-i18n="data_license">CPsP. 46485</span></p>
         <p class="footer-meta" data-i18n="location_value">San Isidro, Lima, Perú</p>
         <a class="btn btn--clay footer-cta js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_footer" data-event="cta_footer">Reservar una cita</a>
       </div>
-
       <div>
         <h3 class="footer-heading" data-i18n="footer_contact">Contacto</h3>
         <div class="footer-contacts">
           <a class="footer-chip js-whatsapp" href="#" data-i18n-wa="wa_footer" data-event="cta_footer_wa">
-            <span class="footer-chip__icon" aria-hidden="true">
-              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
-            </span>
-            <span class="footer-chip__text">
-              <small>WhatsApp</small>
-              <strong>+51 949 722 086</strong>
-            </span>
+            <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg></span>
+            <span class="footer-chip__text"><strong>WhatsApp</strong><span>+51 949 722 086</span></span>
           </a>
           <a class="footer-chip" href="mailto:contacto@carmenvalenzuela.pe">
-            <span class="footer-chip__icon" aria-hidden="true">
-              <svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg>
-            </span>
-            <span class="footer-chip__text">
-              <small data-i18n="label_email">Correo</small>
-              <strong>contacto@carmenvalenzuela.pe</strong>
-            </span>
+            <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg></span>
+            <span class="footer-chip__text"><strong>Email</strong><span>contacto@carmenvalenzuela.pe</span></span>
           </a>
         </div>
       </div>
-
       <div>
         <h3 class="footer-heading" data-i18n="footer_social">Redes</h3>
         <div class="footer-social">
-          <a class="footer-social__btn" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
-            <span>Instagram</span>
-          </a>
-          <a class="footer-social__btn" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
-            <span>Facebook</span>
-          </a>
-          <a class="footer-social__btn" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
-            <span>LinkedIn</span>
-          </a>
+          <a class="footer-social__btn" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a class="footer-social__btn" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a>
+          <a class="footer-social__btn" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <div class="footer-legal">
-        <a href="#aviso-privacidad" data-i18n="footer_privacy">Aviso de privacidad</a>
-        <a href="#politica-datos" data-i18n="footer_policy">Política de tratamiento de datos</a>
-      </div>
-      <p>© <span id="year"></span> Carmen Valenzuela. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+      <details class="privacy-fold" id="aviso-privacidad">
+        <summary data-i18n="legal_title">Aviso de privacidad</summary>
+        <div class="privacy-fold__body">
+          <p data-i18n="legal_p1">Los datos del formulario (nombre, teléfono, correo opcional, modalidad y horario de contacto) se utilizan únicamente para responder tu solicitud de cita. No se solicitan datos clínicos en este sitio.</p>
+          <p id="politica-datos"><strong data-i18n="legal_p2_strong">Política de tratamiento de datos:</strong><span data-i18n="legal_p2"> el tratamiento se realiza conforme a la normativa peruana aplicable en materia de protección de datos personales. Puedes solicitar la actualización o eliminación de tus datos de contacto escribiendo a</span> <a href="mailto:contacto@carmenvalenzuela.pe">contacto@carmenvalenzuela.pe</a>.</p>
+        </div>
+      </details>
+      <p>© <span id="year"></span> Umbrales. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
@@ -526,7 +381,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="wa-panel__head">
         <span class="wa-panel__avatar"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg></span>
         <div class="wa-panel__id">
-          <strong data-i18n="wa_panel_name">Carmen Valenzuela</strong>
+          <strong data-i18n="wa_panel_name">Umbrales</strong>
           <span class="wa-panel__status"><span class="wa-panel__dot" aria-hidden="true"></span><span data-i18n="wa_panel_status">Suele responder por WhatsApp</span></span>
         </div>
         <button type="button" class="wa-panel__close" id="wa-close" aria-label="Cerrar chat"><svg class="icon" aria-hidden="true"><use href="#i-xmark"></use></svg></button>
@@ -547,7 +402,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <span class="wa-float__label" data-i18n="wa_float">WhatsApp</span>
     </button>
   </div>
-
-  
 
 </BaseLayout>

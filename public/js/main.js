@@ -11,6 +11,24 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  /* ---------- Aviso de privacidad (acordeón) ---------- */
+  function openPrivacyFold() {
+    var fold = document.getElementById("aviso-privacidad");
+    if (!fold) return;
+    fold.open = true;
+    fold.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  if (location.hash === "#aviso-privacidad" || location.hash === "#politica-datos") {
+    openPrivacyFold();
+  }
+
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest('a[href="#aviso-privacidad"], a[href="#politica-datos"]');
+    if (!link) return;
+    setTimeout(openPrivacyFold, 0);
+  });
+
   /* ---------- i18n ---------- */
   function t(key) {
     var pack = dict[currentLang] || dict.es || {};
@@ -233,6 +251,18 @@
   var success = document.getElementById("form-success");
 
   if (form) {
+    var submitBtn = form.querySelector('[type="submit"]');
+    var submitLabel = submitBtn ? submitBtn.textContent : "";
+    var errorBox = document.getElementById("form-error");
+
+    function showError() {
+      if (errorBox) {
+        errorBox.classList.add("is-visible");
+      } else {
+        alert(t("form_error"));
+      }
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var honeypot = form.querySelector('[name="empresa"]');
@@ -254,10 +284,100 @@
         language: currentLang,
       });
 
-      form.style.display = "none";
-      if (success) success.classList.add("is-visible");
+      var endpoint = config.formEndpoint;
+      if (!endpoint) {
+        form.style.display = "none";
+        if (success) success.classList.add("is-visible");
+        return;
+      }
+
+      if (errorBox) errorBox.classList.remove("is-visible");
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = t("form_sending");
+      }
+
+      var payload = {
+        nombre: form.nombre.value,
+        telefono: form.telefono.value,
+        email: form.email.value,
+        modalidad: form.modalidad.value,
+        horario: form.horario.value,
+        _subject: "Nueva solicitud de cita — " + form.nombre.value,
+        _template: "table",
+        _captcha: "false",
+      };
+
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("bad_status");
+          return res.json();
+        })
+        .then(function () {
+          form.style.display = "none";
+          if (success) success.classList.add("is-visible");
+        })
+        .catch(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = submitLabel;
+          }
+          showError();
+        });
     });
   }
+
+  /* ---------- Tabs (Servicios / Modalidades / Reservar / Contacto) ---------- */
+  (function tabs() {
+    var root = document.querySelector("[data-tabs]");
+    if (!root) return;
+
+    var buttons = root.querySelectorAll(".tabs__btn");
+    var panels = root.querySelectorAll(".tab-panel");
+
+    function activate(id, scroll) {
+      if (!id) return;
+      buttons.forEach(function (btn) {
+        var on = btn.getAttribute("data-tab") === id;
+        btn.classList.toggle("is-active", on);
+        btn.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach(function (panel) {
+        var on = panel.getAttribute("data-panel") === id;
+        panel.classList.toggle("is-active", on);
+        if (on) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+      });
+      if (scroll) {
+        var target = document.getElementById("explorar");
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      try {
+        history.replaceState(null, "", "#explorar");
+      } catch (_) {}
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        activate(btn.getAttribute("data-tab"), false);
+      });
+    });
+
+    document.querySelectorAll("[data-tab]").forEach(function (el) {
+      if (el.classList.contains("tabs__btn")) return;
+      el.addEventListener("click", function (e) {
+        var id = el.getAttribute("data-tab");
+        if (!id) return;
+        e.preventDefault();
+        activate(id, true);
+        if (toggle && drawer) setMenu(false);
+      });
+    });
+  })();
 
   /* ---------- Reveal ---------- */
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
