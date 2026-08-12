@@ -26,7 +26,7 @@ window.CV_I18N = {
     hero_text:
       "Umbrales nace de una manera de comprender la psicología y la psicoterapia: como un espacio para detenerse, mirar lo que está pasando y encontrar acompañamiento para atravesar aquello que marca un antes y un después.",
     data_license: "CPsP. 46485",
-    data_address: "Av. Pezet 1449 (3.er piso), San Isidro, Lima",
+    data_address: "Av. Pezet 1449, San Isidro, Lima",
     data_price: "S/ 120 por sesión",
     location_value: "San Isidro, Lima, Perú",
     about_eyebrow: "Sobre mí",
@@ -39,7 +39,7 @@ window.CV_I18N = {
     about_p3:
       "A lo largo de mi trayectoria, he trabajado en distintos contextos clínicos, educativos y comunitarios, acompañando a personas y familias en condiciones de vulnerabilidad y en diferentes momentos a lo largo de la vida. Estas experiencias han enriquecido mi manera de comprender el sufrimiento y reforzaron la importancia de construir un espacio terapéutico seguro, respetuoso y contextualizado a la singularidad de cada persona.",
     about_p4:
-      "Mi formación y práctica clínica parten desde una orientación psicoanalítica contemporánea, con una mirada que busca comprender no solo aquello que genera malestar en el presente, teniendo en cuenta la historia personal, sus relaciones y vínculos, así como las experiencias que han ido dando forma a la manera en que cada persona vive y afronta lo que le sucede.",
+      "Mi formación y práctica clínica se desarrollan desde una orientación psicoanalítica contemporánea, que busca comprender el malestar actual teniendo en cuenta la historia personal, las relaciones y vínculos, así como las experiencias que han ido dando forma a la manera en que cada persona vive y afronta lo que le sucede.",
     formation_title: "Formación profesional",
     formation_1: "Licenciatura en Psicología Clínica (UPC)",
     formation_2: "CPsP. 46485",
@@ -76,7 +76,7 @@ window.CV_I18N = {
     svc_eval_note: "*Sólo disponible en modalidad presencial; consultar fechas posibles y honorarios.",
     svc_com_t: "Umbrales en Comunidad",
     svc_com_d:
-      "Diseñamos talleres, charlas y espacios de formación para instituciones, equipos y comunidades de acuerdo con sus necesidades y contexto.",
+      "Psicoterapia, evaluaciones psicológicas y espacios de formación para personas, equipos y comunidades.",
     svc_com_topics: "Temas frecuentes:",
     svc_com_1: "Bienestar y salud mental",
     svc_com_2: "Comunicación, regulación emocional y vínculos",
@@ -150,7 +150,7 @@ window.CV_I18N = {
     legal_eyebrow: "Legal",
     legal_title: "Aviso de privacidad",
     legal_p1:
-      "Los datos del formulario (nombre, teléfono, correo opcional, modalidad y horario de contacto) se utilizan únicamente para responder tu solicitud de cita. No se solicitan datos clínicos en este sitio.",
+      "Los datos de contacto que compartas (WhatsApp, correo u otros canales) se utilizan únicamente para responder tu solicitud de cita. No se solicitan datos clínicos en este sitio.",
     legal_p2_strong: "Política de tratamiento de datos:",
     legal_p2:
       " el tratamiento se realiza conforme a la normativa peruana aplicable en materia de protección de datos personales. Puedes solicitar la actualización o eliminación de tus datos de contacto escribiendo a",
@@ -160,7 +160,7 @@ window.CV_I18N = {
     footer_rights: "Todos los derechos reservados.",
     to_top_aria: "Volver arriba",
     wa_float: "WhatsApp",
-    wa_float_aria: "Reservar una cita por WhatsApp",
+    wa_float_aria: "Escribir por WhatsApp",
     wa_teaser: "¿Conversamos?",
     wa_panel_name: "Umbrales",
     wa_panel_status: "Suele responder por WhatsApp",
@@ -168,23 +168,25 @@ window.CV_I18N = {
     wa_panel_greet2: "¿En qué puedo ayudarte hoy?",
     wa_panel_open: "Abrir chat",
     wa_default:
-      "👋 Hola, Umbrales.\n\nEncontré su página y me gustaría *reservar una consulta*.\n\n📍 Preferencia: presencial (San Isidro) o virtual\n🗓️ ¿Podrían indicarme disponibilidad?\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría agendar una consulta.\n\n📍 Modalidad: presencial o virtual\n\n¿Cuál sería el siguiente paso?\n\nGracias.",
     wa_header:
-      "👋 Hola, Umbrales.\n\nVi su web y quiero *reservar una cita*.\n\n📍 San Isidro (presencial) o virtual\n🗓️ ¿Qué disponibilidad tienen?\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría agendar una consulta.\n\n📍 Modalidad: presencial o virtual\n\n¿Cuál sería el siguiente paso?\n\nGracias.",
     wa_hero:
-      "👋 Hola, Umbrales.\n\nLlegué desde el inicio de su web y me gustaría *agendar una consulta*.\n\n✨ Busco un espacio para conversar\n📍 Modalidad: presencial o virtual\n\n¿Cuál sería el siguiente paso?\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría agendar una consulta.\n\n📍 Modalidad: presencial o virtual\n\n¿Cuál sería el siguiente paso?\n\nGracias.",
     wa_menu:
-      "👋 Hola, Umbrales.\n\nDesde el menú de su web quiero *reservar una cita*.\n\n¿Me pueden orientar con disponibilidad?\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría agendar una consulta.\n\n📍 Modalidad: presencial o virtual\n\n¿Cuál sería el siguiente paso?\n\nGracias.",
+    wa_comunidad:
+      "👋 Hola, Umbrales.\n\nVi la sección Umbrales en comunidad y me gustaría conocer un poco más sobre las actividades y espacios que ofrecen.\n\n¿Podemos conversar?\n\nGracias.",
     wa_servicios:
-      "👋 Hola, Umbrales.\n\nVi la sección de *servicios* y me gustaría consultar por psicoterapia / evaluaciones / comunidad.\n\n¿Podemos conversar?\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nVi la sección Umbrales en comunidad y me gustaría conocer un poco más sobre las actividades y espacios que ofrecen.\n\n¿Podemos conversar?\n\nGracias.",
     wa_reservar:
-      "👋 Hola, Umbrales.\n\nQuiero *agendar un encuentro*.\n\n📍 Modalidad: presencial o virtual\n🗓️ ¿Qué disponibilidad tienen?\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría agendar un encuentro.\n\n📍 Modalidad: presencial o virtual\n\n¿Podrían indicarme los horarios disponibles y el siguiente paso?\n\nGracias.",
     wa_contact:
-      "👋 Hola, Umbrales.\n\nLes escribo desde *Contacto* en su web.\n\nMe gustaría coordinar una cita.\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría conocer un poco más sobre el espacio y las consultas.\n\n¿Podemos conversar?\n\nGracias.",
     wa_footer:
-      "👋 Hola, Umbrales.\n\nLes escribo desde el pie de su web para *reservar una cita*.\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría agendar una consulta.\n\n📍 Modalidad: presencial o virtual\n\n¿Cuál sería el siguiente paso?\n\nGracias.",
     wa_float_msg:
-      "👋 Hola, Umbrales.\n\nMe gustaría *conversar* sobre una posible consulta.\n\n¿Podemos coordinar?\n\nGracias.",
+      "👋 Hola, Umbrales.\n\nMe gustaría conocer un poco más sobre el espacio y las consultas.\n\n¿Podemos conversar?\n\nGracias.",
   },
 
   en: {
@@ -211,7 +213,7 @@ window.CV_I18N = {
     hero_text:
       "Umbrales comes from a way of understanding psychology and psychotherapy: as a space to pause, look at what is happening, and find accompaniment to move through what marks a before and an after.",
     data_license: "CPsP. 46485",
-    data_address: "Av. Pezet 1449 (3rd floor), San Isidro, Lima",
+    data_address: "Av. Pezet 1449, San Isidro, Lima",
     data_price: "S/ 120 per session",
     location_value: "San Isidro, Lima, Peru",
     about_eyebrow: "About me",
@@ -224,7 +226,7 @@ window.CV_I18N = {
     about_p3:
       "Throughout my career I have worked in clinical, educational, and community settings, accompanying people and families in situations of vulnerability and at different moments across the life course. These experiences have deepened my understanding of suffering and reinforced the importance of building a therapeutic space that is safe, respectful, and attuned to each person's singularity.",
     about_p4:
-      "My training and clinical practice are grounded in a contemporary psychoanalytic orientation, seeking to understand not only what causes distress in the present, but also personal history, relationships and bonds, and the experiences that have shaped how each person lives and faces what happens to them.",
+      "My training and clinical practice develop from a contemporary psychoanalytic orientation that seeks to understand present distress while taking into account personal history, relationships and bonds, as well as the experiences that have shaped how each person lives and faces what happens to them.",
     formation_title: "Professional training",
     formation_1: "Licentiate in Clinical Psychology (UPC)",
     formation_2: "CPsP. 46485",
@@ -261,7 +263,7 @@ window.CV_I18N = {
     svc_eval_note: "*Available in person only; please inquire about dates and fees.",
     svc_com_t: "Umbrales in Community",
     svc_com_d:
-      "We design workshops, talks, and training spaces for institutions, teams, and communities according to their needs and context.",
+      "Psychotherapy, psychological assessments, and training spaces for people, teams, and communities.",
     svc_com_topics: "Frequent topics:",
     svc_com_1: "Well-being and mental health",
     svc_com_2: "Communication, emotional regulation, and bonds",
@@ -334,7 +336,7 @@ window.CV_I18N = {
     legal_eyebrow: "Legal",
     legal_title: "Privacy notice",
     legal_p1:
-      "Form data (name, phone, optional email, modality, and contact time) is used only to respond to your appointment request. Clinical details are not requested on this site.",
+      "Contact details you share (WhatsApp, email, or other channels) are used only to respond to your appointment request. Clinical details are not requested on this site.",
     legal_p2_strong: "Data processing policy:",
     legal_p2:
       " processing follows applicable Peruvian personal data protection rules. You may request updates or deletion of your contact data by writing to",
@@ -344,7 +346,7 @@ window.CV_I18N = {
     footer_rights: "All rights reserved.",
     to_top_aria: "Back to top",
     wa_float: "WhatsApp",
-    wa_float_aria: "Book a session on WhatsApp",
+    wa_float_aria: "Message on WhatsApp",
     wa_teaser: "Let's talk?",
     wa_panel_name: "Umbrales",
     wa_panel_status: "Usually replies on WhatsApp",
@@ -352,22 +354,24 @@ window.CV_I18N = {
     wa_panel_greet2: "How can I help you today?",
     wa_panel_open: "Open chat",
     wa_default:
-      "👋 Hello, Umbrales.\n\nI found your website and would like to *book a consultation*.\n\n📍 Preference: in person (San Isidro) or online\n🗓️ Could you share availability?\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to schedule a consultation.\n\n📍 Modality: in person or online\n\nWhat would be the next step?\n\nThank you.",
     wa_header:
-      "👋 Hello, Umbrales.\n\nI saw your website and want to *book an appointment*.\n\n📍 San Isidro (in person) or online\n🗓️ What availability do you have?\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to schedule a consultation.\n\n📍 Modality: in person or online\n\nWhat would be the next step?\n\nThank you.",
     wa_hero:
-      "👋 Hello, Umbrales.\n\nI came from the top of your website and would like to *schedule a consultation*.\n\n✨ I am looking for a space to talk\n📍 Modality: in person or online\n\nWhat would be the next step?\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to schedule a consultation.\n\n📍 Modality: in person or online\n\nWhat would be the next step?\n\nThank you.",
     wa_menu:
-      "👋 Hello, Umbrales.\n\nFrom your website menu I would like to *book an appointment*.\n\nCould you guide me on availability?\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to schedule a consultation.\n\n📍 Modality: in person or online\n\nWhat would be the next step?\n\nThank you.",
+    wa_comunidad:
+      "👋 Hello, Umbrales.\n\nI saw the Umbrales in Community section and would like to learn more about the activities and spaces you offer.\n\nCan we talk?\n\nThank you.",
     wa_servicios:
-      "👋 Hello, Umbrales.\n\nI saw your *services* section and would like to inquire about psychotherapy / assessments / community.\n\nCan we talk?\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI saw the Umbrales in Community section and would like to learn more about the activities and spaces you offer.\n\nCan we talk?\n\nThank you.",
     wa_reservar:
-      "👋 Hello, Umbrales.\n\nI would like to *schedule a meeting*.\n\n📍 Modality: in person or online\n🗓️ What availability do you have?\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to schedule a meeting.\n\n📍 Modality: in person or online\n\nCould you share available times and the next step?\n\nThank you.",
     wa_contact:
-      "👋 Hello, Umbrales.\n\nI am writing from *Contact* on your website.\n\nI would like to coordinate an appointment.\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to learn a bit more about the space and the consultations.\n\nCan we talk?\n\nThank you.",
     wa_footer:
-      "👋 Hello, Umbrales.\n\nI am writing from the footer of your website to *book an appointment*.\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to schedule a consultation.\n\n📍 Modality: in person or online\n\nWhat would be the next step?\n\nThank you.",
     wa_float_msg:
-      "👋 Hello, Umbrales.\n\nI would like to *talk* about a possible consultation.\n\nCan we coordinate?\n\nThank you.",
+      "👋 Hello, Umbrales.\n\nI would like to learn a bit more about the space and the consultations.\n\nCan we talk?\n\nThank you.",
   },
 };

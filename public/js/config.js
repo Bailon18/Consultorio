@@ -17,7 +17,7 @@ window.CV_CONFIG = {
   formEndpoint: "https://formsubmit.co/ajax/paucarmontesbailon@gmail.com",
 
   license: "C.Ps.P. 46485",
-  address: "Av. Pezet 1449 (3.er piso), San Isidro, Lima",
+  address: "Av. Pezet 1449, San Isidro, Lima",
   sessionDuration: "50 minutos",
   schedule: "Con cita previa, según disponibilidad de agenda",
   price: "S/ 120 por sesión",

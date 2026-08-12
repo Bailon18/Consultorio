@@ -17,8 +17,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="#sobre-carmen" data-i18n="nav_about">Sobre mí</a>
         <a href="#explorar" data-tab="servicios" data-i18n="nav_services">Servicios</a>
         <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">Modalidades</a>
-        <a href="#explorar" data-tab="reservar" data-i18n="nav_book">Reservar</a>
-        <a href="#explorar" data-tab="contacto" data-i18n="nav_contact">Contacto</a>
+        <a href="#agendar" data-i18n="nav_book">Reservar</a>
+        <a href="#contacto" data-i18n="nav_contact">Contacto</a>
       </nav>
 
       <div class="header-actions">
@@ -41,8 +41,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="#sobre-carmen" data-i18n="nav_about">Sobre mí</a>
         <a href="#explorar" data-tab="servicios" data-i18n="nav_services">Servicios</a>
         <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">Modalidades</a>
-        <a href="#explorar" data-tab="reservar" data-i18n="nav_book">Reservar</a>
-        <a href="#explorar" data-tab="contacto" data-i18n="nav_contact">Contacto</a>
+        <a href="#agendar" data-i18n="nav_book">Reservar</a>
+        <a href="#contacto" data-i18n="nav_contact">Contacto</a>
         <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_menu" data-event="cta_menu_mobile">Reservar una cita</a>
       </nav>
     </div>
@@ -74,8 +74,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="container about">
         <div class="about__photo reveal">
           <picture>
-            <source srcset="/images/carmen-valenzuela-cutout.webp" type="image/webp" />
-            <img src="/images/carmen-valenzuela-cutout.png" alt="Retrato profesional de Carmen Valenzuela" width="1168" height="1003" loading="lazy" decoding="async" />
+            <source srcset="/images/carmen-bw-cutout.webp" type="image/webp" />
+            <img src="/images/carmen-bw-cutout.png" alt="Retrato profesional de Carmen Valenzuela" width="847" height="799" loading="lazy" decoding="async" />
           </picture>
         </div>
         <div class="reveal">
@@ -85,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p data-i18n="about_p1">Soy Carmen N. Valenzuela Avalos, psicóloga clínica y psicoterapeuta psicoanalítica.</p>
           <p data-i18n="about_p2">Mi forma de acompañar parte de una mirada que entiende a cada persona en relación con su historia, vínculos y las circunstancias que atraviesa. Acompaño procesos en los que algo de la vida cambia, se pierde, se transforma o deja de ser como antes: momentos de crisis, duelos y pérdidas, transiciones vitales, dificultades vinculares y el impacto de diversas enfermedades y condiciones crónicas de salud.</p>
           <p data-i18n="about_p3">A lo largo de mi trayectoria, he trabajado en distintos contextos clínicos, educativos y comunitarios, acompañando a personas y familias en condiciones de vulnerabilidad y en diferentes momentos a lo largo de la vida. Estas experiencias han enriquecido mi manera de comprender el sufrimiento y reforzaron la importancia de construir un espacio terapéutico seguro, respetuoso y contextualizado a la singularidad de cada persona.</p>
-          <p data-i18n="about_p4">Mi formación y práctica clínica parten desde una orientación psicoanalítica contemporánea, con una mirada que busca comprender no solo aquello que genera malestar en el presente, teniendo en cuenta la historia personal, sus relaciones y vínculos, así como las experiencias que han ido dando forma a la manera en que cada persona vive y afronta lo que le sucede.</p>
+          <p data-i18n="about_p4">Mi formación y práctica clínica se desarrollan desde una orientación psicoanalítica contemporánea, que busca comprender el malestar actual teniendo en cuenta la historia personal, las relaciones y vínculos, así como las experiencias que han ido dando forma a la manera en que cada persona vive y afronta lo que le sucede.</p>
 
           <div class="formation">
             <h3 class="formation__title" data-i18n="formation_title">Formación profesional</h3>
@@ -109,8 +109,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="tabs__list" role="tablist" aria-label="Secciones">
             <button type="button" class="tabs__btn is-active" role="tab" id="tab-servicios" aria-selected="true" aria-controls="panel-servicios" data-tab="servicios" data-i18n="tab_services">¿En qué puedo ayudarte?</button>
             <button type="button" class="tabs__btn" role="tab" id="tab-modalidades" aria-selected="false" aria-controls="panel-modalidades" data-tab="modalidades" data-i18n="tab_modality">Cómo atendemos</button>
-            <button type="button" class="tabs__btn" role="tab" id="tab-reservar" aria-selected="false" aria-controls="panel-reservar" data-tab="reservar" data-i18n="tab_book">Agendar un encuentro</button>
-            <button type="button" class="tabs__btn" role="tab" id="tab-contacto" aria-selected="false" aria-controls="panel-contacto" data-tab="contacto" data-i18n="tab_contact">Contacto</button>
           </div>
 
           <!-- A) SERVICIOS -->
@@ -148,7 +146,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <article class="offer offer--community">
               <div class="offer__top"><span class="offer__index" aria-hidden="true">03</span></div>
               <h3 data-i18n="svc_com_t">Umbrales en Comunidad</h3>
-              <p data-i18n="svc_com_d">Diseñamos talleres, charlas y espacios de formación para instituciones, equipos y comunidades de acuerdo con sus necesidades y contexto.</p>
+              <p data-i18n="svc_com_d">Psicoterapia, evaluaciones psicológicas y espacios de formación para personas, equipos y comunidades.</p>
               <p class="offer__sub" data-i18n="svc_com_topics">Temas frecuentes:</p>
               <ul class="offer__points">
                 <li data-i18n="svc_com_1">Bienestar y salud mental</li>
@@ -158,7 +156,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <li data-i18n="svc_com_5">Acompañamiento en condiciones crónicas</li>
               </ul>
               <p class="note" data-i18n="svc_com_note">*Disponibilidad presencial y virtual; escríbenos y solicita una propuesta.</p>
-              <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_write_wa" data-i18n-wa="wa_servicios" data-event="cta_servicios">Escribir por WhatsApp</a>
+              <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_write_wa" data-i18n-wa="wa_comunidad" data-event="cta_comunidad">Escribir por WhatsApp</a>
             </article>
           </div>
 
@@ -175,7 +173,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h3 data-i18n="mod_pres_t">Presencial</h3>
                 <p class="offer__sub" data-i18n="mod_pres_phrase">Un espacio para encontrarnos en persona.</p>
                 <p data-i18n="mod_pres_d">La atención presencial se realiza en San Isidro, Lima, en un espacio pensado para brindar privacidad, tranquilidad y comodidad durante las sesiones.</p>
-                <p><strong data-i18n="mod_location_label">Ubicación:</strong> <span data-i18n="data_address">Av. Pezet 1449 (3.er piso), San Isidro, Lima</span></p>
+                <p><strong data-i18n="mod_location_label">Ubicación:</strong> <span data-i18n="data_address">Av. Pezet 1449, San Isidro, Lima</span></p>
                 <div class="map-slot">
                   <iframe
                     title="Mapa del consultorio"
@@ -208,121 +206,77 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <p data-i18n="fees_p3">La tarifa se acuerda al iniciar el proceso y busca sostener un equilibrio entre accesibilidad, continuidad del tratamiento y sostenibilidad del espacio.</p>
             </article>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- C) RESERVAR -->
-          <div class="tab-panel" role="tabpanel" id="panel-reservar" aria-labelledby="tab-reservar" data-panel="reservar" hidden>
-            <header class="tab-intro">
-              <h2 class="section__title" data-i18n="book_title">Agendar un encuentro</h2>
-              <p class="section__lead" data-i18n="book_eyebrow">Dar el primer paso, a tu ritmo.</p>
-              <p data-i18n="book_lead">Comenzar no tiene que ser complicado. Escríbeme y conversamos: si estás atravesando un momento que merece ser escuchado, podemos encontrar juntos un espacio para ello.</p>
-            </header>
+    <!-- AGENDAR (siempre visible, compacto) -->
+    <section class="section" id="agendar">
+      <div class="container">
+        <header class="tab-intro reveal">
+          <p class="section__eyebrow" data-i18n="book_eyebrow">Dar el primer paso, a tu ritmo.</p>
+          <h2 class="section__title" data-i18n="book_title">Agendar un encuentro</h2>
+          <p class="section__lead" data-i18n="book_lead">Comenzar no tiene que ser complicado. Escríbeme y conversamos: si estás atravesando un momento que merece ser escuchado, podemos encontrar juntos un espacio para ello.</p>
+        </header>
 
-            <div class="steps">
-              <article class="step">
-                <div class="step__top"><span class="step__num" aria-hidden="true">01</span></div>
-                <h3 data-i18n="book_s1_t">Escríbeme</h3>
-                <p data-i18n="book_s1_d">Cuéntame brevemente qué tipo de atención estás buscando.</p>
-              </article>
-              <article class="step">
-                <div class="step__top"><span class="step__num" aria-hidden="true">02</span></div>
-                <h3 data-i18n="book_s2_t">Conversemos</h3>
-                <p data-i18n="book_s2_d">Revisamos juntos la disponibilidad y modalidad que se ajusta a ti.</p>
-              </article>
-              <article class="step">
-                <div class="step__top"><span class="step__num" aria-hidden="true">03</span></div>
-                <h3 data-i18n="book_s3_t">Confirma tu sesión</h3>
-                <p data-i18n="book_s3_d">Una vez coordinados los detalles, realizas el abono y el horario queda reservado para ti.</p>
-              </article>
-            </div>
+        <div class="steps reveal">
+          <article class="step">
+            <div class="step__top"><span class="step__num" aria-hidden="true">01</span></div>
+            <h3 data-i18n="book_s1_t">Escríbeme</h3>
+            <p data-i18n="book_s1_d">Cuéntame brevemente qué tipo de atención estás buscando.</p>
+          </article>
+          <article class="step">
+            <div class="step__top"><span class="step__num" aria-hidden="true">02</span></div>
+            <h3 data-i18n="book_s2_t">Conversemos</h3>
+            <p data-i18n="book_s2_d">Revisamos juntos la disponibilidad y modalidad que se ajusta a ti.</p>
+          </article>
+          <article class="step">
+            <div class="step__top"><span class="step__num" aria-hidden="true">03</span></div>
+            <h3 data-i18n="book_s3_t">Confirma tu sesión</h3>
+            <p data-i18n="book_s3_d">Una vez coordinados los detalles, realizas el abono y el horario queda reservado para ti.</p>
+          </article>
+        </div>
 
-            <div class="book-cta">
-              <p class="book-thanks" data-i18n="book_thanks">Pronto nos encontraremos; gracias por confiar en este espacio.</p>
-              <div class="btn-group">
-                <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_write_wa" data-i18n-wa="wa_reservar" data-event="cta_reservar">Escribir por WhatsApp</a>
-              </div>
-              <p class="note"><span data-i18n="book_email_label">Si necesitas comunicarte, puedes escribirnos a:</span> <a href="mailto:contacto@carmenvalenzuela.pe">contacto@carmenvalenzuela.pe</a></p>
-              <p class="note" data-i18n="book_social_note">También puedes encontrarnos en redes (Facebook e Instagram).</p>
-              <p class="book-cta__community" data-i18n="book_community">Umbrales también es un espacio que se construye en comunidad. Puedes seguirnos para conocer más sobre la propuesta, actividades y contenidos.</p>
-              <div class="social-links">
-                <a class="social-links__item" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
-                <a class="social-links__item" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a>
-                <a class="social-links__item" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
-              </div>
-            </div>
+        <div class="book-cta reveal">
+          <p class="book-thanks" data-i18n="book_thanks">Pronto nos encontraremos; gracias por confiar en este espacio.</p>
+          <div class="btn-group">
+            <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_write_wa" data-i18n-wa="wa_reservar" data-event="cta_reservar">Escribir por WhatsApp</a>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- D) CONTACTO -->
-          <div class="tab-panel" role="tabpanel" id="panel-contacto" aria-labelledby="tab-contacto" data-panel="contacto" hidden>
-            <header class="tab-intro">
-              <h2 class="section__title" data-i18n="contact_title">Contacto</h2>
-              <p class="section__lead" data-i18n="contact_lead">Escríbeme por WhatsApp o síguenos en redes. Prefiero un mensaje breve; no pedimos detalles clínicos por aquí.</p>
-            </header>
+    <!-- CONTACTO compacto (sin formulario) -->
+    <section class="section section--soft" id="contacto">
+      <div class="container contact-compact">
+        <div class="contact-compact__grid">
+          <header class="contact-compact__copy reveal">
+            <h2 class="section__title" data-i18n="contact_title">Contacto</h2>
+            <p class="section__lead" data-i18n="contact_lead">Escríbeme por WhatsApp o síguenos en redes. Prefiero un mensaje breve; no pedimos detalles clínicos por aquí.</p>
+            <p class="contact-compact__note" data-i18n="book_community">Umbrales también es un espacio que se construye en comunidad. Puedes seguirnos para conocer más sobre la propuesta, actividades y contenidos.</p>
+          </header>
 
-            <div class="contact-channels">
-              <a class="footer-chip js-whatsapp" href="#" data-i18n-wa="wa_contact" data-event="cta_contacto_wa">
-                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg></span>
-                <span class="footer-chip__text"><strong>WhatsApp</strong><span>+51 949 722 086</span></span>
-              </a>
-              <a class="footer-chip" href="mailto:contacto@carmenvalenzuela.pe">
-                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg></span>
-                <span class="footer-chip__text"><strong data-i18n="contact_email_label">Correo</strong><span>contacto@carmenvalenzuela.pe</span></span>
-              </a>
-              <a class="footer-chip" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
-                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
-                <span class="footer-chip__text"><strong>Instagram</strong><span>@carmenvalenzuela.psi</span></span>
-              </a>
-              <a class="footer-chip" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
-                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></span>
-                <span class="footer-chip__text"><strong>Facebook</strong><span>Carmen Valenzuela</span></span>
-              </a>
-              <a class="footer-chip" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer">
-                <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></span>
-                <span class="footer-chip__text"><strong>LinkedIn</strong><span>Carmen Valenzuela</span></span>
-              </a>
-            </div>
-
-            <div class="panel" style="margin-top:1.5rem">
-              <form class="form" id="contact-form" novalidate>
-                <div class="form-field">
-                  <label for="nombre" data-i18n="form_name">Nombre</label>
-                  <input id="nombre" name="nombre" type="text" autocomplete="name" required maxlength="80" data-i18n-placeholder="form_name_ph" placeholder="Tu nombre" />
-                </div>
-                <div class="form-field">
-                  <label for="telefono" data-i18n="form_phone">Teléfono / WhatsApp</label>
-                  <input id="telefono" name="telefono" type="tel" autocomplete="tel" required maxlength="20" data-i18n-placeholder="form_phone_ph" placeholder="Ej. 9XXXXXXXX" />
-                </div>
-                <div class="form-field">
-                  <label for="email"><span data-i18n="form_email">Correo electrónico</span> <span class="hint" data-i18n="form_email_opt">(opcional)</span></label>
-                  <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="tu@correo.com" />
-                </div>
-                <div class="form-field">
-                  <label for="modalidad" data-i18n="form_modality">Modalidad preferida</label>
-                  <select id="modalidad" name="modalidad" required>
-                    <option value="" data-i18n="form_modality_ph">Selecciona una opción</option>
-                    <option value="presencial" data-i18n="form_mod_pres">Presencial en San Isidro</option>
-                    <option value="virtual" data-i18n="form_mod_virt">Virtual</option>
-                    <option value="indistinto" data-i18n="form_mod_any">Indistinto</option>
-                  </select>
-                </div>
-                <div class="form-field">
-                  <label for="horario" data-i18n="form_schedule">Horario de contacto</label>
-                  <select id="horario" name="horario" required>
-                    <option value="" data-i18n="form_modality_ph">Selecciona una opción</option>
-                    <option value="manana" data-i18n="form_sch_am">Mañana</option>
-                    <option value="tarde" data-i18n="form_sch_pm">Tarde</option>
-                    <option value="noche" data-i18n="form_sch_night">Noche</option>
-                  </select>
-                </div>
-                <div class="hp" aria-hidden="true"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off" /></div>
-                <label class="consent">
-                  <input type="checkbox" name="consentimiento" required />
-                  <span><span data-i18n="form_consent_before">He leído el</span> <a href="#aviso-privacidad" data-i18n="footer_privacy">Aviso de privacidad</a> <span data-i18n="form_consent_after">y autorizo el tratamiento de mis datos personales para contactarme respecto a una cita.</span></span>
-                </label>
-                <button class="btn btn--primary" type="submit" data-i18n="form_submit">Enviar solicitud</button>
-              </form>
-              <div class="form-success" id="form-success" role="status" aria-live="polite" data-i18n="form_success">Gracias. Tu solicitud fue registrada. Te contactaré pronto para coordinar tu cita.</div>
-              <div class="form-error" id="form-error" role="alert" aria-live="assertive" data-i18n="form_error">No se pudo enviar en este momento. Escríbeme por WhatsApp o inténtalo de nuevo.</div>
-            </div>
+          <div class="contact-channels reveal">
+            <a class="footer-chip js-whatsapp" href="#" data-i18n-wa="wa_contact" data-event="cta_contacto_wa">
+              <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg></span>
+              <span class="footer-chip__text"><strong>WhatsApp</strong><span>+51 949 722 086</span></span>
+            </a>
+            <a class="footer-chip" href="mailto:contacto@carmenvalenzuela.pe">
+              <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg></span>
+              <span class="footer-chip__text"><strong data-i18n="contact_email_label">Correo</strong><span>contacto@carmenvalenzuela.pe</span></span>
+            </a>
+            <a class="footer-chip" href="https://instagram.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
+              <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+              <span class="footer-chip__text"><strong>Instagram</strong><span>@carmenvalenzuela.psi</span></span>
+            </a>
+            <a class="footer-chip" href="https://facebook.com/carmenvalenzuela.psi" target="_blank" rel="noopener noreferrer">
+              <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></span>
+              <span class="footer-chip__text"><strong>Facebook</strong><span>Carmen Valenzuela</span></span>
+            </a>
+            <a class="footer-chip" href="https://www.linkedin.com/in/carmenvalenzuela" target="_blank" rel="noopener noreferrer">
+              <span class="footer-chip__icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></span>
+              <span class="footer-chip__text"><strong>LinkedIn</strong><span>Carmen Valenzuela</span></span>
+            </a>
           </div>
         </div>
       </div>
@@ -364,7 +318,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <details class="privacy-fold" id="aviso-privacidad">
         <summary data-i18n="legal_title">Aviso de privacidad</summary>
         <div class="privacy-fold__body">
-          <p data-i18n="legal_p1">Los datos del formulario (nombre, teléfono, correo opcional, modalidad y horario de contacto) se utilizan únicamente para responder tu solicitud de cita. No se solicitan datos clínicos en este sitio.</p>
+          <p data-i18n="legal_p1">Los datos de contacto que compartas (WhatsApp, correo u otros canales) se utilizan únicamente para responder tu solicitud de cita. No se solicitan datos clínicos en este sitio.</p>
           <p id="politica-datos"><strong data-i18n="legal_p2_strong">Política de tratamiento de datos:</strong><span data-i18n="legal_p2"> el tratamiento se realiza conforme a la normativa peruana aplicable en materia de protección de datos personales. Puedes solicitar la actualización o eliminación de tus datos de contacto escribiendo a</span> <a href="mailto:contacto@carmenvalenzuela.pe">contacto@carmenvalenzuela.pe</a>.</p>
         </div>
       </details>
@@ -390,7 +344,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="wa-msg" data-i18n="wa_panel_greet1">Hola 👋, gracias por escribir.</p>
         <p class="wa-msg" data-i18n="wa_panel_greet2">¿En qué puedo ayudarte hoy?</p>
       </div>
-      <a class="wa-panel__cta js-whatsapp" href="#" data-i18n-aria="wa_float_aria" aria-label="Reservar una cita por WhatsApp" data-i18n-wa="wa_float_msg" data-event="cta_float">
+      <a class="wa-panel__cta js-whatsapp" href="#" data-i18n-aria="wa_float_aria" aria-label="Escribir por WhatsApp" data-i18n-wa="wa_float_msg" data-event="cta_float">
         <span data-i18n="wa_panel_open">Abrir chat</span>
         <svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg>
       </a>
