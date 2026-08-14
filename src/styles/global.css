@@ -247,11 +247,12 @@ a:hover {
 .nav a {
   text-decoration: none;
   color: var(--mute);
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  padding: 0.5rem 0.7rem;
+  padding: 0.45rem 0.55rem;
   border-radius: 999px;
   transition: 0.2s var(--ease);
+  white-space: nowrap;
 }
 
 .nav a:hover {
@@ -2641,14 +2642,16 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0;
-  max-width: 5.5rem;
+  flex-shrink: 0;
   text-decoration: none;
 }
 
 .brand--logo img {
-  width: 100%;
-  height: auto;
   display: block;
+  width: auto;
+  height: auto;
+  max-height: 3.25rem;
+  max-width: 6.5rem;
 }
 
 .hero--umbrales {
@@ -3131,7 +3134,8 @@ body {
     text-align: left;
   }
 
-  .brand--logo {
-    max-width: 4.75rem;
+  .brand--logo img {
+    max-height: 2.9rem;
+    max-width: 5.75rem;
   }
 }

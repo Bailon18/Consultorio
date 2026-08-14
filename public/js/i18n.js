@@ -11,9 +11,9 @@ window.CV_I18N = {
     brand_tagline: "Espacio de psicoterapia clínica",
     nav_home: "Inicio",
     nav_about: "Sobre mí",
-    nav_services: "Servicios",
-    nav_modality: "Modalidades",
-    nav_book: "Reservar",
+    nav_services: "¿En qué puedo ayudarte?",
+    nav_modality: "¿Cómo atendemos?",
+    nav_book: "Agendar un encuentro",
     nav_contact: "Contacto",
     cta_book: "Reservar una cita",
     cta_write_wa: "Escribir por WhatsApp",
@@ -50,12 +50,12 @@ window.CV_I18N = {
     formation_cont:
       "Psicoterapia, artes expresivas, acompañamiento en procesos de enfermedad, duelo y transiciones vitales.",
     tab_services: "¿En qué puedo ayudarte?",
-    tab_modality: "Cómo atendemos",
+    tab_modality: "¿Cómo atendemos?",
     tab_book: "Agendar un encuentro",
     tab_contact: "Contacto",
     svc_title: "¿En qué puedo ayudarte?",
     svc_lead:
-      "Psicoterapia y evaluaciones psicológicas y espacios de acompañamiento para distintos momentos y necesidades a lo largo de la vida.",
+      "Psicoterapia, evaluaciones psicológicas y espacios de formación para personas, equipos y comunidades.",
     svc_psy_t: "Psicoterapia",
     svc_psy_d:
       "Un espacio de acompañamiento especializado para adolescentes, jóvenes y adultos que atraviesan momentos de cambio con la finalidad de comprender y elaborar aquello que están viviendo.",
@@ -76,7 +76,7 @@ window.CV_I18N = {
     svc_eval_note: "*Sólo disponible en modalidad presencial; consultar fechas posibles y honorarios.",
     svc_com_t: "Umbrales en Comunidad",
     svc_com_d:
-      "Psicoterapia, evaluaciones psicológicas y espacios de formación para personas, equipos y comunidades.",
+      "Diseñamos talleres, charlas y espacios de formación para instituciones, equipos y comunidades de acuerdo con sus necesidades y contexto.",
     svc_com_topics: "Temas frecuentes:",
     svc_com_1: "Bienestar y salud mental",
     svc_com_2: "Comunicación, regulación emocional y vínculos",
@@ -198,9 +198,9 @@ window.CV_I18N = {
     brand_tagline: "Clinical psychotherapy space",
     nav_home: "Home",
     nav_about: "About me",
-    nav_services: "Services",
-    nav_modality: "Modalities",
-    nav_book: "Book",
+    nav_services: "How can I help you?",
+    nav_modality: "How we meet",
+    nav_book: "Schedule a meeting",
     nav_contact: "Contact",
     cta_book: "Book a session",
     cta_write_wa: "Message on WhatsApp",
@@ -242,7 +242,7 @@ window.CV_I18N = {
     tab_contact: "Contact",
     svc_title: "How can I help you?",
     svc_lead:
-      "Psychotherapy, psychological assessments, and accompaniment spaces for different moments and needs across the life course.",
+      "Psychotherapy, psychological assessments, and training spaces for people, teams, and communities.",
     svc_psy_t: "Psychotherapy",
     svc_psy_d:
       "A specialized accompaniment space for adolescents, young people, and adults going through change, aimed at understanding and working through what they are experiencing.",
@@ -263,7 +263,7 @@ window.CV_I18N = {
     svc_eval_note: "*Available in person only; please inquire about dates and fees.",
     svc_com_t: "Umbrales in Community",
     svc_com_d:
-      "Psychotherapy, psychological assessments, and training spaces for people, teams, and communities.",
+      "We design workshops, talks, and training spaces for institutions, teams, and communities according to their needs and context.",
     svc_com_topics: "Frequent topics:",
     svc_com_1: "Well-being and mental health",
     svc_com_2: "Communication, emotional regulation, and bonds",

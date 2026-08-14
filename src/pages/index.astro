@@ -9,15 +9,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand brand--logo" href="#inicio">
-        <img src="/images/umbrales-mark.png" alt="Umbrales" width="160" height="130" decoding="async" />
+        <img src="/images/umbrales-mark.png" alt="Umbrales" width="326" height="365" decoding="async" />
       </a>
 
       <nav class="nav" aria-label="Principal">
         <a href="#inicio" data-i18n="nav_home">Inicio</a>
         <a href="#sobre-carmen" data-i18n="nav_about">Sobre mí</a>
-        <a href="#explorar" data-tab="servicios" data-i18n="nav_services">Servicios</a>
-        <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">Modalidades</a>
-        <a href="#agendar" data-i18n="nav_book">Reservar</a>
+        <a href="#explorar" data-tab="servicios" data-i18n="nav_services">¿En qué puedo ayudarte?</a>
+        <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">¿Cómo atendemos?</a>
+        <a href="#agendar" data-i18n="nav_book">Agendar un encuentro</a>
         <a href="#contacto" data-i18n="nav_contact">Contacto</a>
       </nav>
 
@@ -39,9 +39,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <nav aria-label="Menú móvil">
         <a href="#inicio" data-i18n="nav_home">Inicio</a>
         <a href="#sobre-carmen" data-i18n="nav_about">Sobre mí</a>
-        <a href="#explorar" data-tab="servicios" data-i18n="nav_services">Servicios</a>
-        <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">Modalidades</a>
-        <a href="#agendar" data-i18n="nav_book">Reservar</a>
+        <a href="#explorar" data-tab="servicios" data-i18n="nav_services">¿En qué puedo ayudarte?</a>
+        <a href="#explorar" data-tab="modalidades" data-i18n="nav_modality">¿Cómo atendemos?</a>
+        <a href="#agendar" data-i18n="nav_book">Agendar un encuentro</a>
         <a href="#contacto" data-i18n="nav_contact">Contacto</a>
         <a class="btn btn--clay js-whatsapp" href="#" data-i18n="cta_book" data-i18n-wa="wa_menu" data-event="cta_menu_mobile">Reservar una cita</a>
       </nav>
@@ -108,14 +108,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="tabs" data-tabs>
           <div class="tabs__list" role="tablist" aria-label="Secciones">
             <button type="button" class="tabs__btn is-active" role="tab" id="tab-servicios" aria-selected="true" aria-controls="panel-servicios" data-tab="servicios" data-i18n="tab_services">¿En qué puedo ayudarte?</button>
-            <button type="button" class="tabs__btn" role="tab" id="tab-modalidades" aria-selected="false" aria-controls="panel-modalidades" data-tab="modalidades" data-i18n="tab_modality">Cómo atendemos</button>
+            <button type="button" class="tabs__btn" role="tab" id="tab-modalidades" aria-selected="false" aria-controls="panel-modalidades" data-tab="modalidades" data-i18n="tab_modality">¿Cómo atendemos?</button>
           </div>
 
           <!-- A) SERVICIOS -->
           <div class="tab-panel is-active" role="tabpanel" id="panel-servicios" aria-labelledby="tab-servicios" data-panel="servicios">
             <header class="tab-intro">
               <h2 class="section__title" data-i18n="svc_title">¿En qué puedo ayudarte?</h2>
-              <p class="section__lead" data-i18n="svc_lead">Psicoterapia y evaluaciones psicológicas y espacios de acompañamiento para distintos momentos y necesidades a lo largo de la vida.</p>
+              <p class="section__lead" data-i18n="svc_lead">Psicoterapia, evaluaciones psicológicas y espacios de formación para personas, equipos y comunidades.</p>
             </header>
 
             <div class="offers">
@@ -146,7 +146,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <article class="offer offer--community">
               <div class="offer__top"><span class="offer__index" aria-hidden="true">03</span></div>
               <h3 data-i18n="svc_com_t">Umbrales en Comunidad</h3>
-              <p data-i18n="svc_com_d">Psicoterapia, evaluaciones psicológicas y espacios de formación para personas, equipos y comunidades.</p>
+              <p data-i18n="svc_com_d">Diseñamos talleres, charlas y espacios de formación para instituciones, equipos y comunidades de acuerdo con sus necesidades y contexto.</p>
               <p class="offer__sub" data-i18n="svc_com_topics">Temas frecuentes:</p>
               <ul class="offer__points">
                 <li data-i18n="svc_com_1">Bienestar y salud mental</li>
