@@ -21,7 +21,7 @@ window.CV_CONFIG = {
   sessionDuration: "50 minutos",
   schedule: "Con cita previa, según disponibilidad de agenda",
   price: "S/ 120 por sesión",
-  instagram: "https://instagram.com/carmenvalenzuela.psi",
+  instagram: "https://www.instagram.com/umbrales.psicoterapia",
   facebook: "https://www.facebook.com/share/19GT7kYfMb/",
   linkedin: "https://www.linkedin.com/in/carmen-valenzuela-avalos-0266b2238",
 
