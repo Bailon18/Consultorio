@@ -4,17 +4,17 @@
  */
 window.CV_CONFIG = {
   /** Solo dígitos con código de país */
-  whatsappNumber: "51949722086",
+  whatsappNumber: "51927477800",
 
-  email: "contacto@carmenvalenzuela.pe",
-  domain: "www.carmenvalenzuela.pe",
+  email: "hola@umbralespsicoterapia.com",
+  domain: "www.umbralespsicoterapia.com",
 
   /**
    * Endpoint para el envío del formulario de contacto.
    * PRUEBA: FormSubmit (activar confirmando el primer correo que llega).
    * Producción: reemplazar por el endpoint con clave/hash o el correo real de Carmen.
    */
-  formEndpoint: "https://formsubmit.co/ajax/paucarmontesbailon@gmail.com",
+  formEndpoint: "https://formsubmit.co/ajax/hola@umbralespsicoterapia.com",
 
   license: "C.Ps.P. 46485",
   address: "Av. Pezet 1449, San Isidro, Lima",
@@ -22,8 +22,8 @@ window.CV_CONFIG = {
   schedule: "Con cita previa, según disponibilidad de agenda",
   price: "S/ 120 por sesión",
   instagram: "https://instagram.com/carmenvalenzuela.psi",
-  facebook: "https://facebook.com/carmenvalenzuela.psi",
-  linkedin: "https://www.linkedin.com/in/carmenvalenzuela",
+  facebook: "https://www.facebook.com/share/19GT7kYfMb/",
+  linkedin: "https://www.linkedin.com/in/carmen-valenzuela-avalos-0266b2238",
 
   gtmId: "",
   ga4Id: "",
